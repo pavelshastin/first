@@ -11,6 +11,7 @@ var gulp = require("gulp"),
 	filter = require("gulp-filter"),
 	imagemin = require("gulp-imagemin"),
 	size = require("gulp-size"),
+	spriteSmith = require("gulp.spritesmith"),
 	browserSync = require("browser-sync"),
 	reload = browserSync.reload;
 
@@ -54,6 +55,21 @@ gulp.task("wiredep", function(){
 		.pipe(gulp.dest('app/templates/common/'));
 
 });
+
+
+gulp.task("sprite", function(){
+	
+	return gulp.src("app/icons/*.png")
+			.pipe(spriteSmith({
+				imgName: "images/sprites.png",
+				cssName: "css/common/sprites.scss",
+				padding: 10,
+				cssFormat: "scss"
+			}))
+			.pipe(gulp.dest("app/"))
+
+});
+
 
 
 gulp.task("watch", function(){
@@ -115,7 +131,7 @@ gulp.task('useref', function(){
 return gulp.src('app/*.html')
 		.pipe(useref())
 		.pipe(gulpif("*.js", uglify()))
-		.pipe(gulpif("*.css", minifyCss({compatibility: 'ie8'})))
+		//.pipe(gulpif("*.css", minifyCss({compatibility: 'ie8'})))
 		.pipe(gulp.dest("dist/"))
 });
 

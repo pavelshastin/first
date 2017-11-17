@@ -37,3 +37,25 @@ $greyLight: #dedede;
 	border-radius: 50%;
 }
 
+
+@mixin sprites_custom($sprites, $keyword) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    
+    @if str-index($sprite-name, $keyword) != null {
+      
+      @if str-index($sprite-name, 'hover') != null {
+        
+        .#{$sprite-name}:hover {
+          @include sprite($sprite);
+        }
+       }
+
+
+        .#{$sprite-name} {
+          @include sprite($sprite);
+        }
+    }
+  }
+}
+

@@ -1,0 +1,132 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-04_portfolio_03 {
+  background-image: url(../images/sprites.png);
+  background-position: -93px -61px;
+  width: 8px;
+  height: 13px;
+}
+.icon-btn1_13 {
+  background-image: url(../images/sprites.png);
+  background-position: -93px -33px;
+  width: 14px;
+  height: 14px;
+}
+.icon-btn1_16 {
+  background-image: url(../images/sprites.png);
+  background-position: -93px -47px;
+  width: 14px;
+  height: 14px;
+}
+.icon-btn_03 {
+  background-image: url(../images/sprites.png);
+  background-position: 0px -78px;
+  width: 19px;
+  height: 15px;
+}
+.icon-btn_06 {
+  background-image: url(../images/sprites.png);
+  background-position: -93px -17px;
+  width: 15px;
+  height: 16px;
+}
+.icon-btn_09 {
+  background-image: url(../images/sprites.png);
+  background-position: -93px 0px;
+  width: 16px;
+  height: 17px;
+}
+.icon-btns1_03 {
+  background-image: url(../images/sprites.png);
+  background-position: -69px -60px;
+  width: 16px;
+  height: 18px;
+}
+.icon-btns1_05 {
+  background-image: url(../images/sprites.png);
+  background-position: -53px -60px;
+  width: 16px;
+  height: 18px;
+}
+.icon-btns1_10 {
+  background-image: url(../images/sprites.png);
+  background-position: -36px -60px;
+  width: 17px;
+  height: 18px;
+}
+.icon-btns1_13 {
+  background-image: url(../images/sprites.png);
+  background-position: -19px -60px;
+  width: 17px;
+  height: 18px;
+}
+.icon-btns1_18 {
+  background-image: url(../images/sprites.png);
+  background-position: -37px -78px;
+  width: 18px;
+  height: 15px;
+}
+.icon-btns1_21 {
+  background-image: url(../images/sprites.png);
+  background-position: -19px -78px;
+  width: 18px;
+  height: 15px;
+}
+.icon-btns2_03 {
+  background-image: url(../images/sprites.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns2_05 {
+  background-image: url(../images/sprites.png);
+  background-position: -31px -30px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns2_07 {
+  background-image: url(../images/sprites.png);
+  background-position: 0px -30px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns2_12 {
+  background-image: url(../images/sprites.png);
+  background-position: -31px 0px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns2_13 {
+  background-image: url(../images/sprites.png);
+  background-position: -62px 0px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns2_14 {
+  background-image: url(../images/sprites.png);
+  background-position: -62px -30px;
+  width: 31px;
+  height: 30px;
+}
+.icon-btns3_03 {
+  background-image: url(../images/sprites.png);
+  background-position: 0px -60px;
+  width: 19px;
+  height: 18px;
+}

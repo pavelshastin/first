@@ -1,3 +1,4 @@
+@import "sprites.scss";
 @import "mixins.scss";
 
 
@@ -36,36 +37,6 @@
 }
 
 
-.footer_social__fb {
-	background-image: url(../images/css_sprites.png);
-	background-position: 105px 112px;	
-}
+@include sprites_custom($spritesheet-sprites, "footer_social");
 
 
-.footer_social__vk {
-	background-image: url(../images/css_sprites.png);
-	background-position: 104px 163px;	
-}
-
-
-.footer_social__tw {
-	background-image: url(../images/css_sprites.png);
-	background-position: 155px 113px;	
-}
-
- a.footer_social__fb:hover {
-	background-image: url(../images/css_sprites.png);
-	background-position: 207px 113px;
-}
-
-
-a.footer_social__vk:hover {
-	background-image: url(../images/css_sprites.png);
-	background-position: 155px 163px;	
-}
-
-
-a.footer_social__tw:hover {
-	background-image: url(../images/css_sprites.png);
-	background-position: 206px 163px;	
-}

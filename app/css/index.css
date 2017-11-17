@@ -251,28 +251,58 @@ html, body {
   margin-left: 8px; }
 
 .footer_social__fb {
-  background-image: url(../images/css_sprites.png);
-  background-position: 105px 112px; }
+  background-image: url(../../images/sprites.png);
+  background-position: -82px -40px;
+  width: 31px;
+  height: 30px; }
 
-.footer_social__vk {
-  background-image: url(../images/css_sprites.png);
-  background-position: 104px 163px; }
+.footer_social__fb_hover:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: -82px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__fb_hover {
+  background-image: url(../../images/sprites.png);
+  background-position: -82px 0px;
+  width: 31px;
+  height: 30px; }
 
 .footer_social__tw {
-  background-image: url(../images/css_sprites.png);
-  background-position: 155px 113px; }
+  background-image: url(../../images/sprites.png);
+  background-position: -41px -40px;
+  width: 31px;
+  height: 30px; }
 
-a.footer_social__fb:hover {
-  background-image: url(../images/css_sprites.png);
-  background-position: 207px 113px; }
+.footer_social__tw_hover:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px -40px;
+  width: 31px;
+  height: 30px; }
 
-a.footer_social__vk:hover {
-  background-image: url(../images/css_sprites.png);
-  background-position: 155px 163px; }
+.footer_social__tw_hover {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px -40px;
+  width: 31px;
+  height: 30px; }
 
-a.footer_social__tw:hover {
-  background-image: url(../images/css_sprites.png);
-  background-position: 206px 163px; }
+.footer_social__vk {
+  background-image: url(../../images/sprites.png);
+  background-position: -41px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__vk_hover:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__vk_hover {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 30px; }
 
 @font-face {
   font-family: "FiraSans Regular";
