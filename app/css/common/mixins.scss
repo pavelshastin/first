@@ -1,0 +1,39 @@
+﻿$maxWidth: 1200px;
+$sides: 130px;
+$footerHeight: 50px;
+$headerHeight: 82px;
+
+
+$brown:  #414141;
+$brownLight: #727272;
+$white: #ffffff;
+$whiteLight: #f6f6f6;
+$greyLight: #dedede;
+
+
+@mixin flexbox ($direct, $wrap, $justify, $align) {
+	display: flex;
+	flex-direction: $direct;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+
+@mixin font($family, $size, $color) {
+	font-family: $family;
+	font-size: $size;
+	line-height: $size;
+	color: $color;
+
+}
+
+
+@mixin roundBox($radius, $background) {
+	display: block;
+	background-color: $background;
+	height: $radius;
+	width: $radius;
+	border-radius: 50%;
+}
+

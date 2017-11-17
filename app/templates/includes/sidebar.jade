@@ -1,0 +1,23 @@
+﻿-
+	var menu = {
+		'about': 'Обо мне',
+		'career': 'Карьерный путь',
+		'portfolio': 'Портфолио'
+	};
+
+	var href = {
+		'about': 'index.html',
+		'career': 'career.html',
+		'portfolio': 'portfolio.html'
+	};
+
+
+aside.sidebar
+	ul.sidebar_menu
+		-each item, key in menu
+			li(class='sidebar_menu_#{key}')
+				a(href=href[key]) #{item}
+
+
+
+			

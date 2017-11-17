@@ -1,0 +1,71 @@
+@import "mixins.scss";
+
+
+
+.footer {
+	width: 100%;
+	height: $footerHeight;
+	margin: 0px auto;
+	margin-top: -$footerHeight;
+	background-color: $brown;
+}
+
+.footer_container {
+	@include flexbox(row, nowrap, space-between, center);
+	height: 100%;
+	padding: 0px $sides;
+	max-width: $maxWidth;
+	margin: 0px auto;
+}
+
+.footer_conf {
+	@include font("FiraSan Regular", 14px, $brownLight);
+}
+
+
+.footer_social {
+	@include flexbox(row, nowrap, flex-end, center);
+	padding: 0px;
+	list-style: none;
+}
+
+
+.footer_social a {
+	@include roundBox(30px, $brown);
+	margin-left: 8px;
+}
+
+
+.footer_social__fb {
+	background-image: url(../images/css_sprites.png);
+	background-position: 105px 112px;	
+}
+
+
+.footer_social__vk {
+	background-image: url(../images/css_sprites.png);
+	background-position: 104px 163px;	
+}
+
+
+.footer_social__tw {
+	background-image: url(../images/css_sprites.png);
+	background-position: 155px 113px;	
+}
+
+ a.footer_social__fb:hover {
+	background-image: url(../images/css_sprites.png);
+	background-position: 207px 113px;
+}
+
+
+a.footer_social__vk:hover {
+	background-image: url(../images/css_sprites.png);
+	background-position: 155px 163px;	
+}
+
+
+a.footer_social__tw:hover {
+	background-image: url(../images/css_sprites.png);
+	background-position: 206px 163px;	
+}

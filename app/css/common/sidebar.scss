@@ -1,0 +1,120 @@
+@font-face {
+	font-family: "FiraSans Regular";
+	src: url(../fonts/FiraSans-Regular.otf);
+}
+
+@font-face {
+	font-family: "FiraSans Bold";
+	src: url(../fonts/FiraSans-Bold.otf);
+}
+
+
+.sidebar {
+	width: 350px;
+	flex-shrink: 35;
+	background-color: #f6f6f6;
+	display: flex;
+	align-items: stretch;
+	flex-flow: column nowrap;
+	order: 1;
+}
+
+.sidebar_menu {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-end;
+	list-style: none;
+}
+
+
+.sidebar_menu li {
+	//background-color: green;
+	justify-content: flex-end;
+	text-align: right;
+	padding: 0px 24px 0px 0px;
+	margin: 0px;
+	font-family: "FiraSans Regular";
+	font-size: 18px;
+	color: #414141;
+	border-right-width: 6px;
+	border-right-color: #f6f6f6;
+	border-right-style: solid;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}
+
+
+.sidebar_menu li:hover {
+	border-right-width: 6px;
+	border-right-color: #33c1e3;
+	border-right-style: solid;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}	
+
+.sidebar_menu li:hover a {
+	color: #33c1e3;
+	font-family: "FiraSans Bold";
+}	
+
+
+.sidebar_menu li:active {
+	border-right-width: 6px;
+	border-right-color: #33c1e3;
+	border-right-style: solid;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+}	
+
+.sidebar_menu li:active a {
+	color: #33c1e3;
+	font-family: "FiraSans Bold";
+}	
+
+
+.sidebar_menu a {
+	position: relative;
+	line-height: 50px;
+	text-decoration: none;
+	color: #414141
+}
+
+
+.sidebar_menu a:before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0px;
+	left: -28px; 
+	height: 20px;
+	width: 20px;
+	//background-color: red;
+}
+
+.sidebar_menu__about a:before {
+	background: url(../images/css_sprites.png) no-repeat -159px -10px;
+}
+
+.sidebar_menu__career a:before {
+	background: url(../images/css_sprites.png) no-repeat -83px -108px;
+}
+
+.sidebar_menu__portfolio a:before {
+	background: url(../images/css_sprites.png) no-repeat -48px -146px;
+}
+
+
+.sidebar_menu__about:hover a:before {
+	background: url(../images/css_sprites.png) no-repeat -119px -110px;
+}
+
+.sidebar_menu__career:hover a:before {
+	background: url(../images/css_sprites.png) no-repeat -46px -108px;
+}
+
+.sidebar_menu__portfolio:hover a:before {
+	background: url(../images/css_sprites.png) no-repeat -87px -146px;
+}
