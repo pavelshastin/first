@@ -1,0 +1,16 @@
+﻿-
+	var socials = {
+		'fb': '\#facebook',
+		'vk': '\#vkontakte',
+		'tw': '\#twitter',
+	};
+
+
+footer.footer
+	.footer_container
+		.footer_conf  &copy; Конфиденциальность сайта
+		ul.footer_social
+			- each social, key in socials
+				li
+					a(href='#{social}' class="footer_social__#{key}") 
+					

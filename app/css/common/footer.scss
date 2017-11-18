@@ -1,0 +1,40 @@
+@import "mixins.scss";
+
+
+
+.footer {
+	width: 100%;
+	height: $footerHeight;
+	margin: 0px auto;
+	margin-top: -$footerHeight;
+	background-color: $brown;
+}
+
+.footer_container {
+	@include flexbox(row, nowrap, space-between, center);
+	height: 100%;
+	padding: 0px $sides;
+	max-width: $maxWidth;
+	margin: 0px auto;
+}
+
+.footer_conf {
+	@include font("FiraSan Regular", 14px, $brownLight);
+}
+
+
+.footer_social {
+	@include flexbox(row, nowrap, flex-end, center);
+	padding: 0px;
+	list-style: none;
+}
+
+
+.footer_social a {
+	display: block;
+	border-radius: 50%;
+	margin-left: 8px;
+}
+
+
+@import "sprites.scss" //add sprites at the end of the global css-file to override background-color on background-image properties

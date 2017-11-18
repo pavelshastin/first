@@ -1,0 +1,145 @@
+@import "./common/fonts.scss";
+@import "./common/container.scss";
+@import "./common/header.scss";
+@import "./common/sidebar.scss";
+
+
+.content {
+	order: 2;
+	width: 850px;
+	flex-shrink: 85;
+	padding: 20px 110px 0px 20px; /*//margin-right: 130px - margin-right-portfolio-li*/
+	background-color: #f6f6f6;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+
+.main_header {
+	width: 100%;
+	font-family: "FiraSans Medium";
+	font-size: 35px;
+	padding: 0px 0px 20px 0px;
+	margin: 0px;
+	
+}
+
+.portfolio {
+	list-style: none;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin: 0px;
+	padding: 0px;
+}
+
+.portfolio li {
+	width: 220px;
+	height: 280px;
+	box-shadow: 0px 0px 3px #e6e6e6e;
+	background: #ffffff;
+	border-radius: 8px;
+	margin: 0px 20px 20px 0px;
+	padding: 0px;
+	overflow: hidden;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+
+
+.portfolio h4 {
+	margin: 0px 20px 0px 20px;
+	padding: 0px;
+	font-family: "FiraSans Regular";
+	font-size: 21px;
+	height: 24px;
+	color: #33c1e3;
+	order: 2;
+}
+
+
+.portfolio p {
+	margin: 0px 20px 0px 20px;
+	padding: 0px;
+	font-family: "FiraSans Light";
+	font-size: 14px;
+	text-align: top left;
+	height: 21px;
+	color: #414141;
+	order: 3;
+}
+
+
+.portfolio img {
+	width: 100%;
+	height: 172px;
+	order: 1;
+
+}
+
+.portfolio .icon_desktop,  .portfolio .icon_mobile{
+	position: relative;
+	color: #aeaeae;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	height: 19px;
+	margin: 0px 20px 14px 20px;
+	order: 4;	
+}
+
+
+.portfolio .icon_desktop {
+	padding-left: 25px;
+}
+
+.portfolio .icon_mobile {
+	padding-left: 14px;
+}
+
+.portfolio .icon_desktop:before {
+	position: absolute;
+	content: "";
+	bottom: 3px;
+	left: -2px;
+}
+
+
+.portfolio .icon_mobile:before {
+	position: absolute;
+	content: "";
+	bottom: 3px;
+	left: -2px;
+}
+
+
+.portfolio_deals {
+	order: 1;
+}
+
+
+.portfolio_dreams {
+	order: 2;
+}
+
+
+.portfolio_creative {
+	order: 3;
+}
+
+
+.portfolio_frog {
+	order: 4;
+}
+
+
+.portfolio_carbon {
+	order: 5;
+}
+
+
+
+@import "./common/footer.scss";

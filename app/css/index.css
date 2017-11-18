@@ -1,0 +1,455 @@
+@font-face {
+  font-family: "FiraSans Medium";
+  src: url(../../fonts/FiraSans-Medium.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FiraSans Regular";
+  src: url(../../fonts/FiraSans-Regular.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FiraSans Bold";
+  src: url(../../fonts/FiraSans-Bold.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FiraSans Lignt";
+  src: url(../../fonts/FiraSans-Light.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f6f6f6; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.empty {
+  height: 50px; }
+
+.header {
+  width: 100%;
+  height: 82px;
+  background-color: #f6f6f6;
+  position: relative; }
+
+.grad_border {
+  position: absolute;
+  width: 100%;
+  top: 79px;
+  height: 3px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#d5d5d5), to(#f0f0f0));
+  background-image: linear-gradient(to top, #d5d5d5, #f0f0f0); }
+
+.header_container {
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.header_logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 8px 0px 11px 130px;
+  float: left;
+  -webkit-box-shadow: 0px 0px 2px 2px #999999;
+          box-shadow: 0px 0px 2px 2px #999999; }
+
+.header_name {
+  float: left;
+  margin: 28px 0px 22px 20px;
+  padding: 0px;
+  font-size: 18px;
+  font-family: "FiraSan Regular"; }
+
+.header_contacts {
+  position: relative;
+  float: right;
+  margin: 28px 130px 22px 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-family: "FiraSan Light"; }
+
+.header_contacts a {
+  text-decoration: none;
+  padding: 0px;
+  color: #414141; }
+
+.header_contacts > a {
+  color: #32c3e5;
+  border-bottom: 2px dotted #32c3e5;
+  font-family: "FiraSan Bold"; }
+
+.cont_pallete {
+  position: absolute;
+  display: none;
+  bottom: -153px;
+  left: -35px;
+  z-index: 10;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  width: 193px;
+  height: 135px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+.header_contacts:hover .cont_pallete {
+  display: block; }
+
+.header_contacts:hover > a {
+  color: #e96668;
+  border-bottom-color: #e96668; }
+
+.cont_pallete:before, .cont_pallete:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  border: solid transparent;
+  left: 50%; }
+
+.cont_pallete:before {
+  content: "";
+  border-top-width: 0px;
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-bottom-width: 10px;
+  border-bottom-color: #ffffff;
+  z-index: 20;
+  bottom: 133px;
+  margin-left: -5px; }
+
+.cont_pallete:after {
+  content: "";
+  border-top-width: 0px;
+  border-right-width: 7px;
+  border-left-width: 7px;
+  border-bottom-width: 12px;
+  border-bottom-color: #dedede;
+  z-index: 19;
+  bottom: 133px;
+  margin-left: -7px; }
+
+.cont_pallete li {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid #dedede;
+  line-height: 44px;
+  padding-left: 48px; }
+
+.cont_pallete li:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px; }
+
+.footer {
+  width: 100%;
+  height: 50px;
+  margin: 0px auto;
+  margin-top: -50px;
+  background-color: #414141; }
+
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 0px 130px;
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.footer_conf {
+  font-family: "FiraSan Regular";
+  font-size: 14px;
+  line-height: 14px;
+  color: #727272; }
+
+.footer_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  list-style: none; }
+
+.footer_social a {
+  display: block;
+  border-radius: 50%;
+  margin-left: 8px; }
+
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.btn1_13 {
+  background-image: url(../../images/sprites.png);
+  background-position: -85px -108px;
+  width: 14px;
+  height: 14px; }
+
+.btn1_16 {
+  background-image: url(../../images/sprites.png);
+  background-position: -123px -81px;
+  width: 14px;
+  height: 14px; }
+
+.cont_pallete_email:before {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px -108px;
+  width: 19px;
+  height: 15px; }
+
+.cont_pallete_skype:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -123px -28px;
+  width: 16px;
+  height: 17px; }
+
+.cont_pallete_tel:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -123px -55px;
+  width: 15px;
+  height: 16px; }
+
+.footer_social__fb:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: -41px -40px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__fb {
+  background-image: url(../../images/sprites.png);
+  background-position: -82px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__tw:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: -82px -40px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__tw {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__vk:hover {
+  background-image: url(../../images/sprites.png);
+  background-position: -41px 0px;
+  width: 31px;
+  height: 30px; }
+
+.footer_social__vk {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px -40px;
+  width: 31px;
+  height: 30px; }
+
+.portfolio .icon_desktop:before {
+  background-image: url(../../images/sprites.png);
+  background-position: 0px -80px;
+  width: 19px;
+  height: 18px; }
+
+.portfolio .icon_mobile:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -109px -108px;
+  width: 8px;
+  height: 13px; }
+
+.sidebar_menu__about a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -83px -80px;
+  width: 16px;
+  height: 18px; }
+
+.sidebar_menu__about:hover a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -123px 0px;
+  width: 16px;
+  height: 18px; }
+
+.sidebar_menu__career a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -56px -80px;
+  width: 17px;
+  height: 18px; }
+
+.sidebar_menu__career:hover a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -29px -80px;
+  width: 17px;
+  height: 18px; }
+
+.sidebar_menu__portfolio a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -57px -108px;
+  width: 18px;
+  height: 15px; }
+
+.sidebar_menu__portfolio:hover a:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -29px -108px;
+  width: 18px;
+  height: 15px; }
+
+.sidebar {
+  width: 350px;
+  -ms-flex-negative: 35;
+      flex-shrink: 35;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.sidebar_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none; }
+
+.sidebar_menu li {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  padding: 0px 24px 0px 0px;
+  margin: 0px;
+  font-family: "FiraSans Regular";
+  font-size: 18px;
+  color: #414141;
+  border-right-width: 6px;
+  border-right-color: #f6f6f6;
+  border-right-style: solid;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px; }
+
+.sidebar_menu li:hover {
+  border-right-width: 6px;
+  border-right-color: #33c1e3;
+  border-right-style: solid;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px; }
+
+.sidebar_menu li:hover a {
+  color: #33c1e3;
+  font-family: "FiraSans Bold"; }
+
+.sidebar_menu li:active {
+  border-right-width: 6px;
+  border-right-color: #33c1e3;
+  border-right-style: solid;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px; }
+
+.sidebar_menu li:active a {
+  color: #33c1e3;
+  font-family: "FiraSans Bold"; }
+
+.sidebar_menu a {
+  position: relative;
+  line-height: 50px;
+  text-decoration: none;
+  color: #414141; }
+
+.sidebar_menu a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: -28px; }

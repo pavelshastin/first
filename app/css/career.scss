@@ -1,0 +1,136 @@
+@import "./common/fonts.scss";
+@import "./common/container.scss";
+@import "./common/header.scss";
+@import "./common/sidebar.scss";
+
+
+
+
+.content {
+	flex-shrink: 85;
+	display: flex;
+	width: 850px;
+	background-color: #f6f6f6;
+	order: 2;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 20px 130px 0px 20px;
+}
+
+.main_header {
+	width: 100%;
+	font-size: 35px;
+	line-height: 45px;
+	color: #414141;
+	font-family: "FiraSans Medium";
+	margin: 0px;
+	padding: 0px 0px 20px 0px;
+}
+
+
+.main_img {
+	width: 220px;
+	height: 220px;
+	order: 1;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 7px;
+}
+
+
+.career {
+	order: 2;
+	width: 380px;
+	padding: 0px;
+	list-style: none;
+	font-family: "FiraSans Regular";
+	color: #414141;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.career li {
+	position: relative;
+	width: 100%;
+	height: 108px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0px 0px 1px #f0f0f0;
+	margin: 0px 0px 20px 0px;
+	line-height: 1.2em;
+	padding: 20px;
+}
+
+.career li:after {
+	content: "";
+	position: absolute;
+	z-index: 10;
+	left: -20px;
+	top: 54px;
+	width: 0px;
+	height: 128px;
+	border: solid #dddddd;
+	border-right-width: 1px;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+
+.career li:last-child:after {
+	width: 0px;
+	height: 0px;
+}
+
+.career li:before {
+	position: absolute;
+	z-index: 20;
+	width: 54px;
+	left: -63px;
+	top: 44px;
+	font-family: "FiraSans Light";
+	color:  #414141;
+	font-size: 14px;
+	line-height: 20px;
+	background: url("../images/career li-before.png") no-repeat right center;
+
+}
+
+.career li:hover {
+	background-color: #33c1e3;
+	color: #ffffff;
+}
+
+.career li:hover:before {
+	background: url("../images/career li-hover-before.png") no-repeat right center;
+	color: #33c1e3;
+	font-size: 16px;
+	font-family: "FiraSans Bold";
+}
+
+
+.career_2016:before {
+	content: "2016";
+}
+
+
+.career_2015:before {
+	content: "2015";
+}
+
+
+.career_2013:before {
+	content: "2013";
+}
+
+
+.career_2012:before {
+	content: "2012";
+}
+
+.career q {
+	font-family: "FiraSans Bold";
+
+}
+
+
+@import "./common/footer.scss";
