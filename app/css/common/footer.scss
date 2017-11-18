@@ -31,10 +31,14 @@
 
 
 .footer_social a {
+
 	display: block;
 	border-radius: 50%;
 	margin-left: 8px;
 }
 
 
+
 @import "sprites.scss" //add sprites at the end of the global css-file to override background-color on background-image properties
+
+

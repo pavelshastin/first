@@ -64,6 +64,7 @@ gulp.task("sprite", function(){
 				imgName: "images/sprites.png",
 				cssName: "css/common/sprites.scss",
 				padding: 10,
+<<<<<<< HEAD
 				cssFormat: "css",
 				cssOpts: {
 					cssSelector: function(item){
@@ -80,6 +81,7 @@ gulp.task("sprite", function(){
 					}
 
 				}
+
 			}))
 			.pipe(gulp.dest("app/"))
 

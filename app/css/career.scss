@@ -4,8 +4,6 @@
 @import "./common/sidebar.scss";
 
 
-
-
 .content {
 	flex-shrink: 85;
 	display: flex;
@@ -92,7 +90,6 @@
 	font-size: 14px;
 	line-height: 20px;
 	background: url("../images/career li-before.png") no-repeat right center;
-
 }
 
 .career li:hover {
@@ -133,4 +130,6 @@
 }
 
 
+
 @import "./common/footer.scss";
+

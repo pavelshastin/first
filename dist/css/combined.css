@@ -180,6 +180,7 @@ html, body {
   width: 20px;
   height: 17px; }
 
+<<<<<<< HEAD
 /*
 .cont_pallete_email:before {
 	background: url(../images/css_sprites.png) no-repeat -10px -147px;	
@@ -192,6 +193,17 @@ html, body {
 .cont_pallete_skype:before {
 	background: url(../images/css_sprites.png) no-repeat -163px -49px;
 }*/
+=======
+.cont_pallete_email:before {
+  background: url(../images/css_sprites.png) no-repeat -10px -147px; }
+
+.cont_pallete_tel:before {
+  background: url(../images/css_sprites.png) no-repeat -163px -86px; }
+
+.cont_pallete_skype:before {
+  background: url(../images/css_sprites.png) no-repeat -163px -49px; }
+
+>>>>>>> 19d579c91a218ad3077b33642725609bca85e85e
 .footer {
   width: 100%;
   height: 50px;
@@ -253,6 +265,33 @@ html, body {
   border-radius: 50%;
   margin-left: 8px; }
 
+<<<<<<< HEAD
+=======
+.footer_social__fb {
+  background-image: url(../images/css_sprites.png);
+  background-position: 105px 112px; }
+
+.footer_social__vk {
+  background-image: url(../images/css_sprites.png);
+  background-position: 104px 163px; }
+
+.footer_social__tw {
+  background-image: url(../images/css_sprites.png);
+  background-position: 155px 113px; }
+
+a.footer_social__fb:hover {
+  background-image: url(../images/css_sprites.png);
+  background-position: 207px 113px; }
+
+a.footer_social__vk:hover {
+  background-image: url(../images/css_sprites.png);
+  background-position: 155px 163px; }
+
+a.footer_social__tw:hover {
+  background-image: url(../images/css_sprites.png);
+  background-position: 206px 163px; }
+
+>>>>>>> 19d579c91a218ad3077b33642725609bca85e85e
 @font-face {
   font-family: "FiraSans Regular";
   src: url(../fonts/FiraSans-Regular.otf); }

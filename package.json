@@ -32,6 +32,10 @@
   },
   "dependencies": {
     "normalize.css": "^7.0.0"
+
   },
   "keywords": "--unsafe-perm for node-sass"
+
+  }
+
 }
