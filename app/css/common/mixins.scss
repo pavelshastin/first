@@ -1,7 +1,7 @@
 ﻿$maxWidth: 1200px;
 $sides: 130px;
 $footerHeight: 50px;
-$headerHeight: 82px;
+
 
 
 $brown:  #414141;
@@ -9,6 +9,9 @@ $brownLight: #727272;
 $white: #ffffff;
 $whiteLight: #f6f6f6;
 $greyLight: #dedede;
+$blueLight: #32c3e5;
+$redLight: #e96668;
+
 
 
 @mixin flexbox ($direct, $wrap, $justify, $align) {
@@ -38,3 +41,17 @@ $greyLight: #dedede;
 }
 
 
+@mixin border($side, $width, $type, $color){
+	border-right-width: 0px;
+	border-right-color: transparent;
+	border-left-width: 0px;
+	border-left-color: transparent;
+	border-top-width: 0px;
+	border-top-color: transparent;
+	border-bottom-width: 0px;
+	border-bottom-color: transparent;
+
+	border-#{$side}-width: $width;
+	border-#{$side}-color: $color;
+	border-#{$side}-style: $type;
+}

@@ -1,89 +1,82 @@
 @import "mixins.scss";
 
+$headerHeight: 82px;
+$borderHeight: 3px;
+$contactHeight: 44px;
+$contactDelimeterHeight: 1px;
+$numberOfContacts: 3;
+$palleteHeight: ($contactHeight + $contactDelimeterHeight) * $numberOfContacts;
+
 
 .header {
 	width: 100%;
 	height: $headerHeight;
 	background-color: $whiteLight;
+	
 	position: relative;
 }
 
 
-.grad_border {
+.header:after {
+	content: "";
 	position: absolute;
 	width: 100%;
-	top: $headerHeight - 3;
-	height: 3px;
-	background-image: linear-gradient(to top, #d5d5d5, #f0f0f0);
+	top: $headerHeight - $borderHeight;
+	height: $borderHeight;
+    background-image: linear-gradient(to top, #d5d5d5, #f0f0f0);
 }
 
 .header_container {
 	min-height: 100%;
-	max-width: 1200px;
+	@include flexbox(row, nowrap, flex-start, center);
+	padding: 0px $sides;
+	max-width: $maxWidth;
 	margin: 0px auto;
 }
 
 
 .header_logo {
-	height: 60px;
-	width: 60px;
-	border-radius: 50%;
-	margin: 8px 0px 11px 130px;
-	float: left;
+	@include roundBox(60px, $whiteLight);
 	box-shadow: 0px 0px 2px 2px #999999;
-	
 }
 
 
 .header_name {	
-	float: left;
-	margin: 28px 0px 22px 20px;
-	padding: 0px;
-	font-size: 18px;
-	font-family: "FiraSan Regular";
+	margin-left: 20px;
+	@include font("FiraSans Regular", 18px, $brown);
 }
 
 
 .header_contacts {
 	position: relative;
-	float: right;
-	margin: 28px 130px 22px 0px;
-	padding: 0px;
-	font-size: 18px;
-	font-family: "FiraSan Light";
-	
+	margin-left: auto;
 }
 
 
 .header_contacts a {
 	text-decoration: none;
-	padding: 0px ;
-	color: #414141;
-
+	@include font("FiraSans Light", 18px, $brown);
 }
 
 .header_contacts > a {
-	color: #32c3e5;
-	border-bottom: 2px dotted #32c3e5;
-	font-family: "FiraSan Bold";
-
+	@include font("FiraSan Bold", 18px, $blueLight);
+	@include border(bottom, 2px, dotted, $blueLight);
 }
 
 .cont_pallete {	
 	position: absolute;
 	display: none;
-	bottom: -153px;
+	height: $palleteHeight; 
+	width: 193px;
+	bottom: -($palleteHeight + 18);
 	left: -35px;
 	z-index: 10;
 	background: $white;
 	border: 1px solid $greyLight;
 	border-radius: 10px;
-	width: 193px;
-	height: 135px;
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
-
 }
 
 
@@ -92,10 +85,30 @@
 }
 
 .header_contacts:hover > a {
-	color: #e96668;
-	border-bottom-color: #e96668;
+	color: $redLight;
+	border-bottom-color: $redLight;
 }
 
+.cont_pallete li {
+	position: relative;
+	width: 100%;
+	height: $contactHeight;
+	border-bottom: $contactDelimeterHeight solid $greyLight;
+	line-height: $contactHeight;
+	padding-left: 48px; 
+	
+}
+
+// contacts Icons positioning
+
+.cont_pallete li:before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 20px;	
+}
+
+// ---Pallete up-pointing tip (triangle) with border styling
 
 .cont_pallete:before, .cont_pallete:after {
 	position: absolute;
@@ -114,7 +127,7 @@
 	border-right-width: 5px;
 	border-left-width: 5px;
 	border-bottom-width: 10px;
-	border-bottom-color: #ffffff;
+	border-bottom-color: $white;
 	z-index: 20;
 	bottom: 133px;
 	margin-left: -5px;
@@ -128,28 +141,14 @@
 	border-right-width: 7px;
 	border-left-width: 7px;
 	border-bottom-width: 12px;
-	border-bottom-color: #dedede;
+	border-bottom-color: $greyLight;
 	z-index: 19;
 	bottom: 133px;
 	margin-left: -7px; 
 }
 
 
-.cont_pallete li {
-	position: relative;
-	width: 100%;
-	height: 44px;
-	border-bottom: 1px solid #dedede;
-	line-height: 44px;
-	padding-left: 48px; 
-	
-}
 
-.cont_pallete li:before {
-	content: "";
-	position: absolute;
-	top: 15px;
-	left: 20px;	
 
-}
+
 
