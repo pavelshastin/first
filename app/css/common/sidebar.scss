@@ -1,75 +1,53 @@
 
+
 .sidebar {
-	width: 350px;
-	flex-shrink: 35;
-	background-color: #f6f6f6;
-	display: flex;
-	align-items: stretch;
-	flex-flow: column nowrap;
+	width: $sidebarWidth + $sides;
+	flex-shrink: $sidebarWidth/10;
+	background-color: $whiteLight;
+	@include flexbox(column, nowrap, flex-start, stretch);
 	order: 1;
 }
 
 .sidebar_menu {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-end;
+	@include flexbox(column, wrap, flex-start, flex-end);
 	list-style: none;
 }
 
 
 .sidebar_menu li {
-	//background-color: green;
-	justify-content: flex-end;
-	text-align: right;
 	padding: 0px 24px 0px 0px;
 	margin: 0px;
-	font-family: "FiraSans Regular";
-	font-size: 18px;
-	color: #414141;
-	border-right-width: 6px;
-	border-right-color: #f6f6f6;
-	border-right-style: solid;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-bottom-width: 0px;
+	@include font("FiraSans Regular", 18px, $brown);
+	text-align: right;
+	@include border(right, $sidebarBorderWidth, solid, $whiteLight);
 }
 
 
 .sidebar_menu li:hover {
-	border-right-width: 6px;
-	border-right-color: #33c1e3;
-	border-right-style: solid;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-bottom-width: 0px;
+	@include border(right, $sidebarBorderWidth, solid, $blueLightSidebar);
 }	
 
 .sidebar_menu li:hover a {
-	color: #33c1e3;
-	font-family: "FiraSans Bold";
+	@include font("FiraSans Bold", 18px, $blueLightSidebar);
+	line-height: $sidebarMenuItemHeight;
 }	
 
 
 .sidebar_menu li:active {
-	border-right-width: 6px;
-	border-right-color: #33c1e3;
-	border-right-style: solid;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-bottom-width: 0px;
+	@include border(right, $sidebarBorderWidth, solid, $blueLightSidebar);
 }	
 
 .sidebar_menu li:active a {
-	color: #33c1e3;
-	font-family: "FiraSans Bold";
+	@include font("FiraSans Bold", 18px, $blueLightSidebar);
+	line-height: $sidebarMenuItemHeight;
 }	
 
 
 .sidebar_menu a {
 	position: relative;
-	line-height: 50px;
+	line-height: $sidebarMenuItemHeight;
 	text-decoration: none;
-	color: #414141
+	color: $brown;
 }
 
 

@@ -21,10 +21,19 @@ html, body {
 }
 
 .container {
-	@include flexbox(row, wrap, center, flex-start);
+	@include flexbox(row, nowrap, center, flex-start);
 	max-width: $maxWidth;
 	margin: 0px auto;
 }	
+
+.content {
+	width: $contentWidth;
+	@include flexbox(row, wrap, space-between, flex-start);
+	flex-shrink: $contentWidth/10;
+	order: 2;
+	background-color: $whiteLight;
+	padding: 20px 0px 0px 20px;
+}
 
 .empty {
 	height: $footerHeight;

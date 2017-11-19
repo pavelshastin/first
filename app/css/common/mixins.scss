@@ -1,7 +1,12 @@
-﻿$maxWidth: 1200px;
-$sides: 130px;
+﻿$maxWidth: 940px;
+$sides: 0px;
 $footerHeight: 50px;
 
+$sidebarBorderWidth: 6px;
+$sidebarWidth: 220px;
+$sidebarMenuItemHeight: 50px;
+
+$contentWidth: $maxWidth - $sidebarWidth;
 
 
 $brown:  #414141;
@@ -10,6 +15,7 @@ $white: #ffffff;
 $whiteLight: #f6f6f6;
 $greyLight: #dedede;
 $blueLight: #32c3e5;
+$blueLightSidebar: #33c1e3;
 $redLight: #e96668;
 
 
