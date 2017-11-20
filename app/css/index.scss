@@ -1,4 +1,74 @@
+@import "./common/fonts.scss";
 @import "./common/container.scss";
 @import "./common/header.scss";
-@import "./common/footer.scss";
 @import "./common/sidebar.scss";
+
+$buttonResumeHeight: 40px;
+
+
+.content {
+	padding: 0px;
+}
+
+
+.main_photo {
+	@include roundBox(220px, $whiteLight);
+	margin: 28px 20px 20px 60px;
+	shadow-box: 0px 0px 5px $white;
+	order: 1;
+}
+
+.info {
+	@include flexbox(column, nowrap, flex-start, flex-start);
+	width: 380px;
+	margin: 23px 0px 0px 0px;
+	order: 2;
+}
+
+.info_header {
+	@include font("FiraSans Medium", 35px, $brown);
+	margin: 0px;
+	padding: 0px;
+	order: 1;
+}
+
+.info_text {
+	@include font("FiraSans Light", 18px, $brown);
+	line-height: 26px;
+	order: 2;
+}
+
+
+.resume_button {
+	position: relative;
+	display: inline-block;
+	align-self: flex-end;
+	height: $buttonResumeHeight;
+	width: 173px;
+	border: 2px solid $redLight;
+	@include font("OpenSans Bold", 14px, $redLight);
+	text-decoration: none;
+	border-radius: $buttonResumeHeight/2;
+	padding: 10px 0px 16px 36px;
+	margin: 43px 0px 20px 20px;
+	background-color: $whiteLight;
+	order: 3;
+}
+
+
+.resume_button:before {
+	content: "";
+	position: absolute;
+	z-index: 10;
+	left: 12px;
+	top: 10px;
+}
+
+
+.resume_button:hover {
+	background-color: $redLight;
+	@include font("OpenSans Bold", 14px, $white);
+}
+
+
+@import "./common/footer.scss";

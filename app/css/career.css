@@ -23,6 +23,12 @@
   font-style: normal; }
 
 @font-face {
+  font-family: "OpenSans Bold";
+  src: url(../../fonts/openSans_bold.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: "FiraSans Medium";
   src: url(../../fonts/FiraSans-Medium.otf);
   font-weight: normal;
@@ -43,6 +49,12 @@
 @font-face {
   font-family: "FiraSans Lignt";
   src: url(../../fonts/FiraSans-Light.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSans Bold";
+  src: url(../../fonts/openSans_bold.ttf);
   font-weight: normal;
   font-style: normal; }
 
@@ -525,18 +537,24 @@ html, body {
   border-radius: 50%;
   margin-left: 8px; }
 
-.btn1_13 {
-  background-image: url(../../images/sprites.png);
-  background-position: -85px -108px;
-  width: 14px;
-  height: 14px; }
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
 
-.btn1_16 {
-  background-image: url(../../images/sprites.png);
-  background-position: -123px -81px;
-  width: 14px;
-  height: 14px; }
+Example usage in HTML:
 
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
 .cont_pallete_email:before {
   background-image: url(../../images/sprites.png);
   background-position: 0px -108px;
@@ -557,19 +575,19 @@ html, body {
 
 .footer_social__fb:hover {
   background-image: url(../../images/sprites.png);
-  background-position: -41px -40px;
+  background-position: -41px 0px;
   width: 31px;
   height: 30px; }
 
 .footer_social__fb {
   background-image: url(../../images/sprites.png);
-  background-position: -82px 0px;
+  background-position: 0px -40px;
   width: 31px;
   height: 30px; }
 
 .footer_social__tw:hover {
   background-image: url(../../images/sprites.png);
-  background-position: -82px -40px;
+  background-position: -41px -40px;
   width: 31px;
   height: 30px; }
 
@@ -581,13 +599,13 @@ html, body {
 
 .footer_social__vk:hover {
   background-image: url(../../images/sprites.png);
-  background-position: -41px 0px;
+  background-position: -82px -40px;
   width: 31px;
   height: 30px; }
 
 .footer_social__vk {
   background-image: url(../../images/sprites.png);
-  background-position: 0px -40px;
+  background-position: -82px 0px;
   width: 31px;
   height: 30px; }
 
@@ -603,15 +621,27 @@ html, body {
   width: 8px;
   height: 13px; }
 
+.resume_button:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -85px -108px;
+  width: 14px;
+  height: 14px; }
+
+.resume_button:hover:before {
+  background-image: url(../../images/sprites.png);
+  background-position: -123px -81px;
+  width: 14px;
+  height: 14px; }
+
 .sidebar_menu__about a:before {
   background-image: url(../../images/sprites.png);
-  background-position: -83px -80px;
+  background-position: -123px 0px;
   width: 16px;
   height: 18px; }
 
 .sidebar_menu__about:hover a:before {
   background-image: url(../../images/sprites.png);
-  background-position: -123px 0px;
+  background-position: -83px -80px;
   width: 16px;
   height: 18px; }
 
@@ -629,12 +659,12 @@ html, body {
 
 .sidebar_menu__portfolio a:before {
   background-image: url(../../images/sprites.png);
-  background-position: -57px -108px;
+  background-position: -29px -108px;
   width: 18px;
   height: 15px; }
 
 .sidebar_menu__portfolio:hover a:before {
   background-image: url(../../images/sprites.png);
-  background-position: -29px -108px;
+  background-position: -57px -108px;
   width: 18px;
   height: 15px; }

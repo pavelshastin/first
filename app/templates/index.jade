@@ -11,9 +11,14 @@ body
 
 		.container
 			main.content
-				p.
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
-
+				img(src="../images/main_photo.jpg").main_photo
+				
+				.info
+					h1.info_header Обо мне
+					p(class="info_text").
+						Меня зовут Анатолий. Проживаю в городе Тольятти. В последнее время открыл для себя много интересного в JavaScript и всех сопутствующих тенденциях от Microsoft:ASP.NET 4, Knockout, SignalR, Upshot. Учусь писать тестируемый код на net. Делю логику на классы(стараюсь не забывать SOLID принципы) и тестировать юнит тестами. Хорошо пишу процедуры для MySQL. Чувствую в себе слабое владение client side и поэтому стараюсь восполнить 
+		
+					a(href="#", title="load_resume").resume_button Скачать резюме	
 			include ./includes/sidebar.jade
 	.empty
 
