@@ -10,27 +10,28 @@
 				{
 			'comp': 'Weblime',
 			'position': 'Средний разработчик',
-			'period': '2013-2015',
+			'period': '2013 - 2015',
 			'mark': '2015'			
 				},
 
 				{
 			'comp': 'Weblime',
 			'position': 'Младший разработчик',
-			'period': '2012-2013',
+			'period': '2012 - 2013',
 			'mark': '2013'				
 				},
 
 				{
 			'comp': 'Weblime',
 			'position': 'Стажер',
-			'period': '2011-2012',
+			'period': '2011 - 2012',
 			'mark': '2012'			
 				},
 	
 	];
 
-	var cssFile = 'css/career.css'
+	var cssFile = 'css/career.css';
+	var title = 'Карьера';
 
 
 html
@@ -46,9 +47,13 @@ body
 				img(src='images/night_city.jpg', alt='night city').main_img
 
 				ul.career
-					
 					-each job in jobs
-						li(class='career_#{job.mark}') <b><q> #{job.comp} </q></b><br/> #{job.position} <br/> #{job.period}
+						li(class='career_#{job.mark}') 
+							.job_comp <b><q>#{job.comp}</q></b> 
+							.job_position #{job.position}
+								.job_mark #{job.mark}
+								.job_button
+							.job_period #{job.period}
 
 
 			include ./includes/sidebar.jade

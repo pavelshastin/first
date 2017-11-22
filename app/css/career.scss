@@ -5,14 +5,10 @@
 
 
 
-
-
 .main_header {
 	width: 100%;
-	font-size: 35px;
+	@include font("FiraSans Medium", 35px, $brown);
 	line-height: 45px;
-	color: #414141;
-	font-family: "FiraSans Medium";
 	margin: 0px;
 	padding: 0px 0px 20px 0px;
 }
@@ -33,37 +29,51 @@
 	width: 380px;
 	padding: 0px;
 	list-style: none;
-	font-family: "FiraSans Regular";
-	color: #414141;
-	font-size: 20px;
-	line-height: 26px;
+	margin: 0px;
 }
 
 .career li {
 	position: relative;
 	width: 100%;
 	height: 108px;
-	background-color: #ffffff;
+	background-color: $white;
 	border-radius: 8px;
 	box-shadow: 0px 0px 1px #f0f0f0;
 	margin: 0px 0px 20px 0px;
-	line-height: 1.2em;
-	padding: 20px;
+	padding: 18px 20px 18px 20px;
 }
 
+
+.job_comp, .job_position, .job_period {
+	@include font("FiraSans Medium", 18px, $lightBlack);
+}	
+
+
+.job_position {
+	margin: 10px 0px 7px 0px;
+}
+
+.job_comp {
+	@include font("FiraSans Bold", 20px, $lightBlack);
+}
+
+
+.job_mark {
+	@include font("FiraSans Light", 14px, $lightBlack);
+}
+
+
+//-- brown vertical button-to-button line  
 .career li:after {
 	content: "";
 	position: absolute;
 	z-index: 10;
-	left: -20px;
+	left: -22px;
 	top: 54px;
-	width: 0px;
+	width: 1px;
 	height: 128px;
-	border: solid #dddddd;
-	border-right-width: 1px;
-	border-top-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+	background: #dddddd;
+	
 }
 
 .career li:last-child:after {
@@ -71,57 +81,52 @@
 	height: 0px;
 }
 
-.career li:before {
+//---
+
+
+.job_mark {
 	position: absolute;
+	width: 30px;
+	height: 30px;
 	z-index: 20;
 	width: 54px;
 	left: -63px;
-	top: 44px;
-	font-family: "FiraSans Light";
-	color:  #414141;
-	font-size: 14px;
-	line-height: 20px;
-	background: url("../images/career li-before.png") no-repeat right center;
+	top: 48px;
 }
+
+
+.job_button {
+	position: absolute;
+	@include roundBox(20px, $blueLight); //because box-sizing: border-box. Total button diameter is 20px = 10px(content) + 2*5px(border)
+	border: 5px solid $whiteLight;
+	z-index: 20;
+	left: -(36px - 5px);
+	top: 44px;
+}
+
+
 
 .career li:hover {
-	background-color: #33c1e3;
-	color: #ffffff;
+	background-color: $blueLight;
 }
 
-.career li:hover:before {
-	background: url("../images/career li-hover-before.png") no-repeat right center;
-	color: #33c1e3;
-	font-size: 16px;
-	font-family: "FiraSans Bold";
-}
-
-
-.career_2016:before {
-	content: "2016";
+.career li:hover .job_comp,  
+.career li:hover .job_position,
+.career li:hover .job_period {
+	color: $white;
 }
 
 
-.career_2015:before {
-	content: "2015";
+.career li:hover .job_button {
+	border-color: #94e0f2;
+	
 }
 
-
-.career_2013:before {
-	content: "2013";
+.career li:hover .job_mark {
+	@include font("FiraSans Bold", 18px, $blueLight);
+	left: -(63px + 8px);
+	top: (44px - 1px);
 }
-
-
-.career_2012:before {
-	content: "2012";
-}
-
-.career q {
-	font-family: "FiraSans Bold";
-
-}
-
-
 
 @import "./common/footer.scss";
 

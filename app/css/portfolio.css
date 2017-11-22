@@ -165,28 +165,28 @@ html, body {
           box-shadow: 0px 0px 2px 2px #999999; }
 
 .header_name {
-  margin-left: 20px;
-  font-family: "FiraSans Regular";
+  font-family: "FiraSan Regular";
   font-size: 18px;
   line-height: 18px;
-  color: #414141; }
+  color: #414141;
+  margin-left: 15px; }
 
 .header_contacts {
-  position: relative;
   margin-left: auto; }
 
-.header_contacts a {
-  text-decoration: none;
-  font-family: "FiraSans Light";
-  font-size: 18px;
-  line-height: 18px;
-  color: #414141; }
+.cont_wrapper {
+  position: absolute;
+  opacity: 0;
+  top: 26px;
+  left: 9999px;
+  z-index: 20; }
 
-.header_contacts > a {
-  font-family: "FiraSan Bold";
+.cont_icon {
+  font-family: "FiraSan Medium";
   font-size: 18px;
   line-height: 18px;
   color: #32c3e5;
+  font-weight: bold;
   border-right-width: 0px;
   border-right-color: transparent;
   border-left-width: 0px;
@@ -197,16 +197,57 @@ html, body {
   border-bottom-color: transparent;
   border-bottom-width: 2px;
   border-bottom-color: #32c3e5;
-  border-bottom-style: dotted; }
+  border-bottom-style: dotted;
+  padding-bottom: 3px;
+  position: relative; }
+
+.cont_icon:after {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  display: block;
+  background: transparent;
+  height: 82px;
+  width: 193px;
+  top: -32px;
+  left: -30px; }
+
+.cont_icon:hover {
+  font-family: "FiraSan Medium";
+  font-size: 18px;
+  line-height: 18px;
+  color: #e96668;
+  font-weight: bold;
+  border-right-width: 0px;
+  border-right-color: transparent;
+  border-left-width: 0px;
+  border-left-color: transparent;
+  border-top-width: 0px;
+  border-top-color: transparent;
+  border-bottom-width: 0px;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  border-bottom-color: #e96668;
+  border-bottom-style: dotted;
+  padding-bottom: 3px;
+  cursor: pointer; }
+
+.cont_icon:hover .cont_wrapper {
+  left: -35px;
+  opacity: 1;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s; }
+
+.cont_pallete a {
+  text-decoration: none;
+  font-family: "FiraSans Light";
+  font-size: 18px;
+  line-height: 18px;
+  color: #414141; }
 
 .cont_pallete {
-  position: absolute;
-  display: none;
-  height: 135px;
+  height: 132px;
   width: 193px;
-  bottom: -153px;
-  left: -35px;
-  z-index: 10;
   background: #ffffff;
   border: 1px solid #dedede;
   border-radius: 10px;
@@ -214,12 +255,8 @@ html, body {
   padding: 0px;
   list-style: none; }
 
-.header_contacts:hover .cont_pallete {
-  display: block; }
-
-.header_contacts:hover > a {
-  color: #e96668;
-  border-bottom-color: #e96668; }
+.cont_pallete:last-child {
+  border-bottom: none; }
 
 .cont_pallete li {
   position: relative;
@@ -229,42 +266,39 @@ html, body {
   line-height: 44px;
   padding-left: 48px; }
 
+.cont_pallete li:last-child {
+  border-bottom: none; }
+
 .cont_pallete li:before {
   content: "";
   position: absolute;
   top: 15px;
   left: 20px; }
 
-.cont_pallete:before, .cont_pallete:after {
-  position: absolute;
-  content: '';
+.triangle, .triangle:after {
+  position: relative;
   width: 0px;
   height: 0px;
-  padding: 0px;
-  border: solid transparent;
-  left: 50%; }
-
-.cont_pallete:before {
-  content: "";
-  border-top-width: 0px;
-  border-right-width: 5px;
-  border-left-width: 5px;
-  border-bottom-width: 10px;
-  border-bottom-color: #ffffff;
-  z-index: 20;
-  bottom: 133px;
-  margin-left: -5px; }
-
-.cont_pallete:after {
-  content: "";
-  border-top-width: 0px;
-  border-right-width: 7px;
-  border-left-width: 7px;
+  z-index: 10;
   border-bottom-width: 12px;
+  border-bottom-style: solid;
   border-bottom-color: #dedede;
-  z-index: 19;
-  bottom: 133px;
-  margin-left: -7px; }
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-left-color: transparent;
+  border-right-width: 6px;
+  border-right-style: solid;
+  border-right-color: transparent;
+  border-top: none;
+  margin: 0px auto; }
+
+.triangle:after {
+  position: absolute;
+  content: "";
+  border-bottom-color: #ffffff;
+  top: 1px;
+  left: -6px;
+  z-index: 20; }
 
 .sidebar {
   width: 220px;

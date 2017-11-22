@@ -56,7 +56,7 @@ $buttonResumeHeight: 40px;
 }
 
 
-.resume_button:before {
+.resume_button:before, .resume_button:hover:before {
 	content: "";
 	position: absolute;
 	z-index: 10;

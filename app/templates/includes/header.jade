@@ -10,12 +10,14 @@ header.header
 	.header_container
 		img(src="images/scrubs.jpg", alt="log").header_logo
 		h3.header_name Анатолий Анатольев
-		.header_contacts 
-			a(href="#" title="") Мои контакты
-			ul.cont_pallete
-				-each cont, key in conts
-					li(class='cont_pallete_#{key}')
-						a(href="#") #{cont}
+		.header_contacts
+			.cont_icon Мои контакты
+				.cont_wrapper
+					.triangle
+					ul.cont_pallete
+						-each cont, key in conts
+							li(class='cont_pallete_#{key}')
+								a(href="#") #{cont}
 
 
 
