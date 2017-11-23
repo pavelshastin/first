@@ -42,7 +42,7 @@ $redLight: #e96668;
 
 @mixin roundBox($radius, $background) {
 	display: block;
-	background-color: $background;
+	background: $background;
 	height: $radius;
 	width: $radius;
 	border-radius: 50%;

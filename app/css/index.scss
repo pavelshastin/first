@@ -1,7 +1,12 @@
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./hello.scss";
+
 @import "./common/container.scss";
 @import "./common/header.scss";
 @import "./common/sidebar.scss";
+
+
 
 $buttonResumeHeight: 40px;
 
