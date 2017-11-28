@@ -16,6 +16,14 @@
 	padding: 0px $sides;
 	max-width: $maxWidth;
 	margin: 0px auto;
+
+	@include tablet {
+		padding: 0px 20px;
+	}
+
+	@include mobile {
+		line-height: 0px;
+	}
 }
 
 .footer_conf {

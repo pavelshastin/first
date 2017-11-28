@@ -22,7 +22,39 @@ html, body {
 
 .container {
 	@include flexbox(row, nowrap, center, flex-start);
-	max-width: $maxWidth;
+
+	@include ultraDesktop {
+		max-width: 940px + 2*20px; //padding left/right = 20px
+		padding: 0px 20px;
+	}
+
+	
+	@include desktop {
+		max-width: 940px + 2*20px; //padding left/right = 20px
+		padding: 0px 20px;
+	}
+
+
+	@include laptop {
+		max-width: 940px + 2*20px; //padding left/right = 20px
+		padding: 0px 20px;
+	}
+
+
+	@include tablet {
+		max-width: 720px + 2*20px; //padding left/right = 20px
+		padding: 0px 20px;
+		@include flexbox(column, nowrap, flex-start, flex-start);
+	}
+	
+
+	@include mobile {
+		max-width: 440px + 2*20px; //padding left/right = 20px
+		padding: 0px 20px;
+		@include flexbox(column, nowrap, flex-start, flex-start);
+	
+	}
+
 	margin: 0px auto;
 }	
 

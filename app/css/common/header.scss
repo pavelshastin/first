@@ -27,8 +27,30 @@ $triangleWidth: 12px;
 .header_container {
 	min-height: 100%;
 	@include flexbox(row, nowrap, flex-start, center);
-	padding: 0px $sides;
-	max-width: $maxWidth;
+	padding: 0px 20px;
+
+	@include ultraDesktop {
+		max-width: 940px + 2*20px;
+	}
+
+	
+	@include desktop {
+		max-width: 940px + 2*20px;
+	}
+	
+	@include laptop {
+		max-width: 940px + 2*20px;
+	}
+
+
+	@include tablet {
+		max-width: 720px + 2*20px;
+	}
+
+	@include mobile {
+		max-width: 440px + 2*20px;
+	}
+
 	margin: 0px auto;
 }
 

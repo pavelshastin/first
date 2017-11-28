@@ -4,42 +4,96 @@
 	width: $sidebarWidth + $sides;
 	flex-shrink: $sidebarWidth/10;
 	background-color: $whiteLight;
-	@include flexbox(column, nowrap, flex-start, stretch);
+	//@include flexbox(column, nowrap, flex-start, stretch);
 	order: 1;
 }
 
 .sidebar_menu {
 	@include flexbox(column, wrap, flex-start, flex-end);
 	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	@include tablet {
+		@include flexbox(row, nowrap, flex-start, flex-start);
+	}
+
+	@include mobile {
+		@include flexbox(row, nowrap, flex-start, flex-start);
+	}
+
 }
 
 
 .sidebar_menu li {
 	padding: 0px 24px 0px 0px;
 	margin: 0px;
+	white-space: nowrap;
 	@include font("FiraSans Regular", 18px, $brown);
 	text-align: right;
 	@include border(right, $sidebarBorderWidth, solid, $whiteLight);
+
+	@include tablet {
+		border: none;
+		padding-top: 28px;
+	}
+
+	@include mobile {
+		border: none;
+	}
+
 }
 
 
 .sidebar_menu li:hover {
 	@include border(right, $sidebarBorderWidth, solid, $blueLightSidebar);
+
+	@include tablet {
+		border: none;
+	}
+
+	@include mobile {
+		border: none;
+	}
 }	
 
 .sidebar_menu li:hover a {
 	@include font("FiraSans Bold", 18px, $blueLightSidebar);
 	line-height: $sidebarMenuItemHeight;
+
+	@include tablet {
+		line-height: 0px;
+	}
+
+	@include mobile {
+		line-height: 0px;
+	}
 }	
 
 
 .sidebar_menu li:active {
 	@include border(right, $sidebarBorderWidth, solid, $blueLightSidebar);
+
+	@include tablet {
+		border: none;
+	}
+
+	@include mobile {
+		border: none;
+	}
 }	
 
 .sidebar_menu li:active a {
 	@include font("FiraSans Bold", 18px, $blueLightSidebar);
 	line-height: $sidebarMenuItemHeight;
+
+	@include tablet {
+		line-height: 0px;
+	}
+
+	@include mobile {
+		line-height: 0px;
+	}
 }	
 
 
@@ -48,6 +102,14 @@
 	line-height: $sidebarMenuItemHeight;
 	text-decoration: none;
 	color: $brown;
+
+	@include tablet {
+		line-height: 0px;
+	}
+
+	@include mobile {
+		line-height: 0px;
+	}
 }
 
 
@@ -56,6 +118,39 @@
 	position: absolute;
 	display: block;
 	top: 0px;
-	left: -28px; 
+	left: -24px; 
 }
 
+
+.sidebar_menu li {
+	@include tablet {
+		padding-left: 25px;
+		padding-right: 0px;
+		margin-left: 25px;
+	}
+}
+
+
+.sidebar_menu li:first-child {
+	@include tablet {
+		margin-left: 0px;
+	}
+}
+
+
+.sidebar_menu .sidebar_menu__portfolio  {
+	@include tablet {
+		padding-left: 30px;
+		padding-right: 0px;
+		margin-left: 30px;
+
+	}
+
+}
+
+
+.sidebar_menu .sidebar_menu__portfolio a:before {
+	@include tablet {
+		left: -30px;
+	}
+}

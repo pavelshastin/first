@@ -63,3 +63,57 @@ $redLight: #e96668;
 	border-#{$side}-color: $color;
 	border-#{$side}-style: $type;
 }
+
+
+@mixin ultraDesktop {
+	@media screen and (min-width: 1201px){
+		@content;
+
+	}
+
+}
+
+
+@mixin desktop {
+	@media screen and (max-width: 1200px){
+		@content;
+
+	}
+
+}
+
+
+@mixin laptop {
+	@media screen and (max-width: 992px){
+		@content;
+
+	}
+
+}
+
+
+@mixin tablet {
+	@media screen and (max-width: 768px){
+		@content;
+
+	}
+
+}
+
+
+@mixin mobile {
+	@media screen and (max-width: 480px){
+		@content;
+
+	}
+
+}
+
+
+@mixin m_mobile {
+	@media screen and (max-width: 320px){
+		@content;
+
+	}
+
+}
