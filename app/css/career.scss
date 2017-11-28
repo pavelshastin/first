@@ -13,6 +13,13 @@
 	line-height: 45px;
 	margin: 0px;
 	padding: 0px 0px 20px 0px;
+	
+	@include tablet {
+		@include font("FiraSans Medium", 35px, $brown);
+		margin: 45px 0px 25px 0px;
+		padding: 0px;
+	}
+
 }
 
 
@@ -23,6 +30,12 @@
 	margin: 0px;
 	padding: 0px;
 	border-radius: 7px;
+
+	@include tablet {
+		width: 228px;
+		height: 228px;
+	}
+
 }
 
 
@@ -32,6 +45,11 @@
 	padding: 0px;
 	list-style: none;
 	margin: 0px;
+
+	@include tablet {
+		width: 356px;
+	}
+
 }
 
 .career li {

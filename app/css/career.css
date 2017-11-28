@@ -166,7 +166,8 @@ html, body {
   padding: 20px 0px 0px 20px; }
   @media screen and (max-width: 768px) {
     .content {
-      width: 100%; } }
+      width: 100%;
+      padding: 0px; } }
 
 .empty {
   height: 50px; }
@@ -597,6 +598,14 @@ html, body {
   line-height: 45px;
   margin: 0px;
   padding: 0px 0px 20px 0px; }
+  @media screen and (max-width: 768px) {
+    .main_header {
+      font-family: "FiraSans Medium";
+      font-size: 35px;
+      line-height: 35px;
+      color: #414141;
+      margin: 45px 0px 25px 0px;
+      padding: 0px; } }
 
 .main_img {
   width: 220px;
@@ -607,6 +616,10 @@ html, body {
   margin: 0px;
   padding: 0px;
   border-radius: 7px; }
+  @media screen and (max-width: 768px) {
+    .main_img {
+      width: 228px;
+      height: 228px; } }
 
 .career {
   -webkit-box-ordinal-group: 3;
@@ -616,6 +629,9 @@ html, body {
   padding: 0px;
   list-style: none;
   margin: 0px; }
+  @media screen and (max-width: 768px) {
+    .career {
+      width: 356px; } }
 
 .career li {
   position: relative;
