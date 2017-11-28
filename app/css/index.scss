@@ -21,6 +21,12 @@ $buttonResumeHeight: 40px;
 	margin: 28px 20px 20px 60px;
 	shadow-box: 0px 0px 5px $white;
 	order: 1;
+
+	@include tablet {
+		@include roundBox(166px + 2*5px, $whiteLight);
+		border: 5px solid $white;
+		margin: 42px 0px 0px 26px;
+	}
 }
 
 .info {
@@ -28,19 +34,41 @@ $buttonResumeHeight: 40px;
 	width: 380px;
 	margin: 23px 0px 0px 0px;
 	order: 2;
+
+	@include tablet {
+		width: 462px;
+		margin: 42px 38px 0px 0px;
+	}
+
 }
+
+
 
 .info_header {
 	@include font("FiraSans Medium", 35px, $brown);
 	margin: 0px;
 	padding: 0px;
 	order: 1;
+
+	@include tablet {
+		padding: 0px 20px;
+	}
 }
 
 .info_text {
 	@include font("FiraSans Light", 18px, $brown);
 	line-height: 26px;
+	overflow-y: scroll;
 	order: 2;
+
+	@include tablet {
+		@include font("FiraSans Light", 18px, $brown);
+		line-height: 26px;
+		height: 371px;
+		width: 100%;
+		padding: 0px 20px;
+		overflow-y: scroll;
+	}
 }
 
 
@@ -58,6 +86,11 @@ $buttonResumeHeight: 40px;
 	margin: 43px 0px 20px 20px;
 	background-color: $whiteLight;
 	order: 3;
+
+	@include tablet {
+		margin: 34px 25px 0px 0px;
+	}		
+
 }
 
 

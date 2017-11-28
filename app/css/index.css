@@ -50,6 +50,11 @@ body {
   margin: 220px auto;
   border-radius: 8px;
   padding: 0px; }
+  @media screen and (max-width: 768px) {
+    .hello_plate {
+      width: 354px;
+      height: 214px;
+      margin-top: 368px; } }
 
 .img_hello {
   position: relative;
@@ -62,6 +67,16 @@ body {
           box-shadow: 0px 0px 4px 0px #727272;
   margin: 0px auto;
   top: -70px; }
+  @media screen and (max-width: 768px) {
+    .img_hello {
+      display: block;
+      background: #ffffff;
+      height: 104px;
+      width: 104px;
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 0px 2px 0px #727272;
+              box-shadow: 0px 0px 2px 0px #727272;
+      top: -52px; } }
 
 .hello_name, .hello_surname {
   font-family: "OpenSans Bold";
@@ -75,6 +90,9 @@ body {
   text-align: center;
   margin-top: 19px;
   margin-bottom: 5px; }
+  @media screen and (max-width: 768px) {
+    .hello_name {
+      top: -52px; } }
 
 .hello_surname {
   position: relative;
@@ -82,6 +100,9 @@ body {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 0px; }
+  @media screen and (max-width: 768px) {
+    .hello_surname {
+      top: -52px; } }
 
 .hello_button_field {
   position: relative;
@@ -107,6 +128,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 768px) {
+    .hello_button_field {
+      top: -52px; } }
 
 .hello_button_goto {
   display: block;
@@ -207,7 +231,7 @@ html, body {
       padding: 0px 20px; } }
   @media screen and (max-width: 768px) {
     .container {
-      max-width: 760px;
+      max-width: 768px;
       padding: 0px 20px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -268,9 +292,37 @@ html, body {
           order: 2;
   background-color: #f6f6f6;
   padding: 20px 0px 0px 20px; }
+  @media screen and (max-width: 768px) {
+    .content {
+      width: 100%; } }
 
 .empty {
   height: 50px; }
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 0px;
+  height: 0px; }
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: #d8d8d8; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d8d8d8; }
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 0px;
+  height: 0px; }
+
+::-webkit-scrollbar {
+  width: 5px; }
 
 .header {
   width: 100%;
@@ -317,7 +369,7 @@ html, body {
       max-width: 980px; } }
   @media screen and (max-width: 768px) {
     .header_container {
-      max-width: 760px; } }
+      max-width: 768px; } }
   @media screen and (max-width: 480px) {
     .header_container {
       max-width: 480px; } }
@@ -404,6 +456,9 @@ html, body {
   opacity: 1;
   -webkit-transition: opacity 2s;
   transition: opacity 2s; }
+  @media screen and (max-width: 768px) {
+    .cont_icon:hover .cont_wrapper {
+      left: -70px; } }
 
 .cont_pallete a {
   text-decoration: none;
@@ -675,6 +730,15 @@ html, body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
+  @media screen and (max-width: 768px) {
+    .main_photo {
+      display: block;
+      background: #f6f6f6;
+      height: 176px;
+      width: 176px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      margin: 42px 0px 0px 26px; } }
 
 .info {
   display: -webkit-box;
@@ -697,6 +761,10 @@ html, body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
+  @media screen and (max-width: 768px) {
+    .info {
+      width: 462px;
+      margin: 42px 38px 0px 0px; } }
 
 .info_header {
   font-family: "FiraSans Medium";
@@ -708,6 +776,9 @@ html, body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
+  @media screen and (max-width: 768px) {
+    .info_header {
+      padding: 0px 20px; } }
 
 .info_text {
   font-family: "FiraSans Light";
@@ -715,9 +786,21 @@ html, body {
   line-height: 18px;
   color: #414141;
   line-height: 26px;
+  overflow-y: scroll;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
+  @media screen and (max-width: 768px) {
+    .info_text {
+      font-family: "FiraSans Light";
+      font-size: 18px;
+      line-height: 18px;
+      color: #414141;
+      line-height: 26px;
+      height: 371px;
+      width: 100%;
+      padding: 0px 20px;
+      overflow-y: scroll; } }
 
 .resume_button {
   position: relative;
@@ -739,6 +822,9 @@ html, body {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3; }
+  @media screen and (max-width: 768px) {
+    .resume_button {
+      margin: 34px 25px 0px 0px; } }
 
 .resume_button:before, .resume_button:hover:before {
   content: "";
