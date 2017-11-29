@@ -36,10 +36,17 @@
 	@include tablet {
 		border: none;
 		padding-top: 28px;
+		padding-left: 25px;
+		padding-right: 0px;
+		margin-left: 25px;
 	}
 
 	@include mobile {
 		border: none;
+		padding: 17px 17px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		font-size: 14px;
+		line-height: 14px;	
 	}
 
 }
@@ -67,6 +74,7 @@
 
 	@include mobile {
 		line-height: 0px;
+		font-size: 14px;
 	}
 }	
 
@@ -93,6 +101,7 @@
 
 	@include mobile {
 		line-height: 0px;
+		font-size: 14px;
 	}
 }	
 
@@ -119,14 +128,9 @@
 	display: block;
 	top: 0px;
 	left: -24px; 
-}
 
-
-.sidebar_menu li {
-	@include tablet {
-		padding-left: 25px;
-		padding-right: 0px;
-		margin-left: 25px;
+	@include mobile {
+		display: none;
 	}
 }
 
@@ -144,6 +148,11 @@
 		padding-right: 0px;
 		margin-left: 30px;
 
+	}
+
+	@include mobile {
+		padding: 17px 17px 0px 0px;
+		margin: 0px 0px 0px 0px;
 	}
 
 }

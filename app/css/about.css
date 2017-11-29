@@ -122,8 +122,8 @@ html, body {
               align-items: flex-start; } }
   @media screen and (max-width: 480px) {
     .container {
-      max-width: 480px;
-      padding: 0px 20px;
+      max-width: 320px;
+      padding: 0px 10px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -245,7 +245,8 @@ html, body {
       max-width: 768px; } }
   @media screen and (max-width: 480px) {
     .header_container {
-      max-width: 480px; } }
+      max-width: 320px;
+      padding: 0px 10px; } }
 
 .header_logo {
   display: block;
@@ -262,6 +263,11 @@ html, body {
   line-height: 18px;
   color: #414141;
   margin-left: 15px; }
+  @media screen and (max-width: 480px) {
+    .header_name {
+      font-size: 14px;
+      line-height: 21px;
+      width: 70px; } }
 
 .header_contacts {
   margin-left: auto; }
@@ -292,6 +298,15 @@ html, body {
   border-bottom-style: dotted;
   padding-bottom: 3px;
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .cont_icon {
+      background: url("../../icons/cont_handset.png") 0 0 no-repeat;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border: none;
+      width: 33px;
+      height: 33px; } }
 
 .cont_icon:after {
   position: absolute;
@@ -323,6 +338,9 @@ html, body {
   border-bottom-style: dotted;
   padding-bottom: 3px;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .cont_icon:hover {
+      border: none; } }
 
 .cont_icon:hover .cont_wrapper {
   left: -35px;
@@ -332,6 +350,9 @@ html, body {
   @media screen and (max-width: 768px) {
     .cont_icon:hover .cont_wrapper {
       left: -70px; } }
+  @media screen and (max-width: 480px) {
+    .cont_icon:hover .cont_wrapper {
+      left: -170px; } }
 
 .cont_pallete a {
   text-decoration: none;
@@ -481,10 +502,17 @@ html, body {
   @media screen and (max-width: 768px) {
     .sidebar_menu li {
       border: none;
-      padding-top: 28px; } }
+      padding-top: 28px;
+      padding-left: 25px;
+      padding-right: 0px;
+      margin-left: 25px; } }
   @media screen and (max-width: 480px) {
     .sidebar_menu li {
-      border: none; } }
+      border: none;
+      padding: 17px 17px 0px 0px;
+      margin: 0px 0px 0px 0px;
+      font-size: 14px;
+      line-height: 14px; } }
 
 .sidebar_menu li:hover {
   border-right-width: 0px;
@@ -516,7 +544,8 @@ html, body {
       line-height: 0px; } }
   @media screen and (max-width: 480px) {
     .sidebar_menu li:hover a {
-      line-height: 0px; } }
+      line-height: 0px;
+      font-size: 14px; } }
 
 .sidebar_menu li:active {
   border-right-width: 0px;
@@ -548,7 +577,8 @@ html, body {
       line-height: 0px; } }
   @media screen and (max-width: 480px) {
     .sidebar_menu li:active a {
-      line-height: 0px; } }
+      line-height: 0px;
+      font-size: 14px; } }
 
 .sidebar_menu a {
   position: relative;
@@ -568,12 +598,9 @@ html, body {
   display: block;
   top: 0px;
   left: -24px; }
-
-@media screen and (max-width: 768px) {
-  .sidebar_menu li {
-    padding-left: 25px;
-    padding-right: 0px;
-    margin-left: 25px; } }
+  @media screen and (max-width: 480px) {
+    .sidebar_menu a:before {
+      display: none; } }
 
 @media screen and (max-width: 768px) {
   .sidebar_menu li:first-child {
@@ -584,6 +611,11 @@ html, body {
     padding-left: 30px;
     padding-right: 0px;
     margin-left: 30px; } }
+
+@media screen and (max-width: 480px) {
+  .sidebar_menu .sidebar_menu__portfolio {
+    padding: 17px 17px 0px 0px;
+    margin: 0px 0px 0px 0px; } }
 
 @media screen and (max-width: 768px) {
   .sidebar_menu .sidebar_menu__portfolio a:before {
@@ -688,6 +720,9 @@ html, body {
   margin: 0px auto;
   margin-top: -50px;
   background-color: #414141; }
+  @media screen and (max-width: 480px) {
+    .footer {
+      height: 115px; } }
 
 .footer_container {
   display: -webkit-box;
@@ -714,13 +749,36 @@ html, body {
       padding: 0px 20px; } }
   @media screen and (max-width: 480px) {
     .footer_container {
-      line-height: 0px; } }
+      line-height: 0px;
+      max-width: 220px;
+      margin: 0px auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .footer_conf {
-  font-family: "FiraSan Regular";
+  font-family: "FiraSans Regular";
   font-size: 14px;
   line-height: 14px;
   color: #727272; }
+  @media screen and (max-width: 480px) {
+    .footer_conf {
+      text-align: center;
+      line-height: 21px;
+      margin-top: 15px;
+      padding: 0; } }
 
 .footer_social {
   display: -webkit-box;

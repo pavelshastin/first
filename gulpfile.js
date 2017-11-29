@@ -13,12 +13,16 @@ var gulp = require("gulp"),
 	size = require("gulp-size"),
 	spriteSmith = require("gulp.spritesmith"),
 	browserSync = require("browser-sync"),
-	reload = browserSync.reload;
+	reload = browserSync.reload,
+	wait = require("gulp-wait"),
+	time = 1500;
+
 
 
 
 gulp.task("jade", function(){
 	gulp.src("app/templates/*.jade")
+		.pipe(wait(time))
 		.pipe(jade({
 			pretty: '\t'
 		}))
@@ -30,6 +34,7 @@ gulp.task("jade", function(){
 
 gulp.task("style", function(){
 	gulp.src("app/css/*.scss")
+		.pipe(wait(time))
 		.pipe(sass())
 		.pipe(prefixer())
 		.pipe(gulp.dest("app/css/"))
@@ -44,11 +49,14 @@ gulp.task("server", ["jade", "style"], function(){
 			baseDir: "app"
 		}	
 	});
+
+	
 });
 
 //bower dependences
 gulp.task("wiredep", function(){
 	gulp.src("app/templates/pages/*.jade")
+		.pipe(wait(time))
 		.pipe(widerep({
 			ignorePath: /^(\.\.\/)*\.\./
 		}))
@@ -60,6 +68,7 @@ gulp.task("wiredep", function(){
 gulp.task("sprite", function(){
 	
 	return gulp.src("app/icons/*.png")
+			.pipe(wait(time))
 			.pipe(spriteSmith({
 				imgName: "images/sprites.png",
 				cssName: "css/common/sprites.scss",
@@ -88,9 +97,10 @@ gulp.task("sprite", function(){
 
 
 
+
 gulp.task("watch", function(){
 	gulp.watch("app/templates/**/*.jade", ['jade']);
-	gulp.watch("app/css/**/*.scss", ['style']);
+	gulp.watch("app/css/**/*.scss", ['style'], );
 	gulp.watch("bower.json", ['wiredep']);
 	gulp.watch(['app/js/**/*.js', 'app/css/**/*.scss', 'app/css/**/*.css', 'app/*.html'])
 		.on('change', reload);

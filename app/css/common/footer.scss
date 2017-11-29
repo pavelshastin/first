@@ -8,6 +8,10 @@
 	margin: 0px auto;
 	margin-top: -$footerHeight;
 	background-color: $brown;
+
+	@include mobile {
+		height: 115px;
+	}
 }
 
 .footer_container {
@@ -23,11 +27,21 @@
 
 	@include mobile {
 		line-height: 0px;
-	}
+		max-width: 220px;
+		margin: 0px auto;
+		@include flexbox(column, nowrap, flex-start, center);
+ 	}
 }
 
 .footer_conf {
-	@include font("FiraSan Regular", 14px, $brownLight);
+	@include font("FiraSans Regular", 14px, $brownLight);
+
+	@include mobile {
+		text-align: center;
+		line-height: 21px;
+		margin-top: 15px;
+		padding: 0;
+	}
 }
 
 
