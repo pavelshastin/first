@@ -17,7 +17,7 @@
   font-style: normal; }
 
 @font-face {
-  font-family: "FiraSans Lignt";
+  font-family: "FiraSans Light";
   src: url(../../fonts/FiraSans-Light.otf);
   font-weight: normal;
   font-style: normal; }
@@ -47,7 +47,7 @@
   font-style: normal; }
 
 @font-face {
-  font-family: "FiraSans Lignt";
+  font-family: "FiraSans Light";
   src: url(../../fonts/FiraSans-Light.otf);
   font-weight: normal;
   font-style: normal; }
@@ -597,6 +597,11 @@ html, body {
   color: #414141;
   padding: 5px 0px;
   margin: 0px; }
+  @media screen and (max-width: 768px) {
+    .main_header {
+      padding: 0px;
+      margin-top: 23px;
+      margin-bottom: 5px; } }
 
 .portfolio {
   list-style: none;
@@ -618,6 +623,11 @@ html, body {
           align-items: flex-start;
   margin: 0px;
   padding: 0px; }
+  @media screen and (max-width: 768px) {
+    .portfolio {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
 
 .portfolio li {
   width: 220px;
@@ -644,6 +654,13 @@ html, body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
+  @media screen and (max-width: 768px) {
+    .portfolio li {
+      width: 228px;
+      height: 292px;
+      margin-left: 20px; }
+      .portfolio li:nth-child(3n+1) {
+        margin-left: 0px; } }
 
 .portfolio li:last-child {
   margin-right: auto;
@@ -659,10 +676,14 @@ html, body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
+  @media screen and (max-width: 768px) {
+    .portfolio h4 {
+      margin: 15px 20px 0px 20px; } }
 
 .portfolio p {
   margin: 0px 20px 20px 20px;
   padding: 0px;
+  font-size: 14px;
   font-family: "FiraSans Light";
   font-size: 14px;
   line-height: 14px;
@@ -670,6 +691,9 @@ html, body {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3; }
+  @media screen and (max-width: 768px) {
+    .portfolio p {
+      margin: 0px 20px 15px 20px; } }
 
 .portfolio img {
   width: 100%;
@@ -677,6 +701,9 @@ html, body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
+  @media screen and (max-width: 768px) {
+    .portfolio img {
+      height: 178px; } }
 
 .portfolio .icon_desktop, .portfolio .icon_mobile {
   position: relative;
@@ -689,6 +716,9 @@ html, body {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4; }
+  @media screen and (max-width: 768px) {
+    .portfolio .icon_desktop, .portfolio .icon_mobile {
+      margin: 0px 20px 19px 20px; } }
 
 .portfolio .icon_desktop {
   padding-left: 25px; }
@@ -701,12 +731,20 @@ html, body {
   content: "";
   bottom: 3px;
   left: -2px; }
+  @media screen and (max-width: 768px) {
+    .portfolio .icon_desktop:before {
+      bottom: 3px;
+      left: 0px; } }
 
 .portfolio .icon_mobile:before {
   position: absolute;
   content: "";
   bottom: 3px;
   left: -2px; }
+  @media screen and (max-width: 768px) {
+    .portfolio .icon_mobile:before {
+      bottom: 6px;
+      left: 0px; } }
 
 .portfolio_deals {
   -webkit-box-ordinal-group: 2;
