@@ -639,6 +639,11 @@ html, body {
       padding: 0px;
       margin-top: 23px;
       margin-bottom: 5px; } }
+  @media screen and (max-width: 480px) {
+    .main_header {
+      width: auto;
+      padding: 0px;
+      margin: 33px auto 30px auto; } }
 
 .portfolio {
   list-style: none;
@@ -665,6 +670,9 @@ html, body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
+  @media screen and (max-width: 480px) {
+    .portfolio {
+      margin-bottom: 20px; } }
 
 .portfolio li {
   width: 220px;
@@ -698,10 +706,19 @@ html, body {
       margin-left: 20px; }
       .portfolio li:nth-child(3n+1) {
         margin-left: 0px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio li {
+      width: 300px;
+      height: 345px;
+      margin: 0px auto 20px auto;
+      border-radius: 10px; } }
 
 .portfolio li:last-child {
   margin-right: auto;
   margin-left: 20px; }
+  @media screen and (max-width: 480px) {
+    .portfolio li:last-child {
+      margin: 0px auto; } }
 
 .portfolio h4 {
   margin: 15px 20px 5px 20px;
@@ -716,11 +733,18 @@ html, body {
   @media screen and (max-width: 768px) {
     .portfolio h4 {
       margin: 15px 20px 0px 20px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio h4 {
+      font-family: "FiraSans Regular";
+      font-size: 24px;
+      line-height: 24px;
+      color: #33c1e3;
+      padding: 0px;
+      margin: 15px 20px 5px 20px; } }
 
 .portfolio p {
   margin: 0px 20px 20px 20px;
   padding: 0px;
-  font-size: 14px;
   font-family: "FiraSans Light";
   font-size: 14px;
   line-height: 14px;
@@ -731,6 +755,13 @@ html, body {
   @media screen and (max-width: 768px) {
     .portfolio p {
       margin: 0px 20px 15px 20px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio p {
+      font-family: "FiraSans Light";
+      font-size: 16px;
+      line-height: 16px;
+      color: #414141;
+      margin: 0px 20px 20px 20px; } }
 
 .portfolio img {
   width: 100%;
@@ -741,6 +772,9 @@ html, body {
   @media screen and (max-width: 768px) {
     .portfolio img {
       height: 178px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio img {
+      height: 234px; } }
 
 .portfolio .icon_desktop, .portfolio .icon_mobile {
   position: relative;
@@ -756,6 +790,10 @@ html, body {
   @media screen and (max-width: 768px) {
     .portfolio .icon_desktop, .portfolio .icon_mobile {
       margin: 0px 20px 19px 20px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio .icon_desktop, .portfolio .icon_mobile {
+      font-size: 16px;
+      margin: 0px 20px 30px 25px; } }
 
 .portfolio .icon_desktop {
   padding-left: 25px; }
@@ -772,6 +810,10 @@ html, body {
     .portfolio .icon_desktop:before {
       bottom: 3px;
       left: 0px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio .icon_desktop:before {
+      bottom: 3px;
+      left: -3px; } }
 
 .portfolio .icon_mobile:before {
   position: absolute;
@@ -782,6 +824,10 @@ html, body {
     .portfolio .icon_mobile:before {
       bottom: 6px;
       left: 0px; } }
+  @media screen and (max-width: 480px) {
+    .portfolio .icon_mobile:before {
+      bottom: 3px;
+      left: -3px; } }
 
 .portfolio_deals {
   -webkit-box-ordinal-group: 2;
