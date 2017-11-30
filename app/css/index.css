@@ -35,7 +35,7 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  height: 1000px;
+  height: 100%;
   top: 0px;
   z-index: 100;
   background: #f6f6f6;
@@ -55,6 +55,11 @@ body {
       width: 354px;
       height: 214px;
       margin-top: 368px; } }
+  @media screen and (max-width: 480px) {
+    .hello_plate {
+      width: 300px;
+      height: 214px;
+      margin-top: 184px; } }
 
 .img_hello {
   position: relative;
@@ -772,6 +777,15 @@ html, body {
       border-radius: 50%;
       border: 5px solid #ffffff;
       margin: 42px 0px 0px 26px; } }
+  @media screen and (max-width: 480px) {
+    .main_photo {
+      display: block;
+      background: #f6f6f6;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 5px solid #ffffff;
+      margin: 23px auto 0px auto; } }
 
 .info {
   display: -webkit-box;
@@ -798,6 +812,11 @@ html, body {
     .info {
       width: 462px;
       margin: 42px 38px 0px 0px; } }
+  @media screen and (max-width: 480px) {
+    .info {
+      width: 100%;
+      margin: 0px;
+      padding: 0px; } }
 
 .info_header {
   font-family: "FiraSans Medium";
@@ -812,6 +831,10 @@ html, body {
   @media screen and (max-width: 768px) {
     .info_header {
       padding: 0px 20px; } }
+  @media screen and (max-width: 480px) {
+    .info_header {
+      margin: 5px auto 0px auto;
+      padding: 0px; } }
 
 .info_text {
   font-family: "FiraSans Light";
@@ -834,6 +857,18 @@ html, body {
       width: 100%;
       padding: 0px 20px;
       overflow-y: scroll; } }
+  @media screen and (max-width: 480px) {
+    .info_text {
+      font-family: "FiraSans Light";
+      font-size: 16px;
+      line-height: 16px;
+      color: #414141;
+      line-height: 24px;
+      width: 100%;
+      padding: 0px;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 0px; } }
 
 .resume_button {
   position: relative;
@@ -858,6 +893,9 @@ html, body {
   @media screen and (max-width: 768px) {
     .resume_button {
       margin: 34px 25px 0px 0px; } }
+  @media screen and (max-width: 480px) {
+    .resume_button {
+      margin: 40px auto 30px auto; } }
 
 .resume_button:before, .resume_button:hover:before {
   content: "";
