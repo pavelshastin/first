@@ -168,6 +168,11 @@ html, body {
     .content {
       width: 100%;
       padding: 0px; } }
+  @media screen and (max-width: 480px) {
+    .content {
+      width: 100%;
+      padding: 0px;
+      margin: 0px; } }
 
 .empty {
   height: 50px; }

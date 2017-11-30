@@ -168,6 +168,11 @@ html, body {
     .content {
       width: 100%;
       padding: 0px; } }
+  @media screen and (max-width: 480px) {
+    .content {
+      width: 100%;
+      padding: 0px;
+      margin: 0px; } }
 
 .empty {
   height: 50px; }
@@ -632,11 +637,12 @@ html, body {
   padding: 0px 0px 20px 0px; }
   @media screen and (max-width: 768px) {
     .main_header {
-      font-family: "FiraSans Medium";
-      font-size: 35px;
-      line-height: 35px;
-      color: #414141;
       margin: 45px 0px 25px 0px;
+      padding: 0px; } }
+  @media screen and (max-width: 480px) {
+    .main_header {
+      width: auto;
+      margin: 15px auto 13px auto;
       padding: 0px; } }
 
 .main_img {
@@ -652,6 +658,11 @@ html, body {
     .main_img {
       width: 228px;
       height: 228px; } }
+  @media screen and (max-width: 480px) {
+    .main_img {
+      width: 220px;
+      height: 220px;
+      margin: 0px auto; } }
 
 .career {
   -webkit-box-ordinal-group: 3;
@@ -664,6 +675,10 @@ html, body {
   @media screen and (max-width: 768px) {
     .career {
       width: 356px; } }
+  @media screen and (max-width: 480px) {
+    .career {
+      width: 100%;
+      margin: 20px auto; } }
 
 .career li {
   position: relative;
@@ -675,15 +690,27 @@ html, body {
           box-shadow: 0px 0px 1px #f0f0f0;
   margin: 0px 0px 20px 0px;
   padding: 18px 20px 18px 20px; }
+  @media screen and (max-width: 480px) {
+    .career li {
+      padding: 12px 20px 18px 20px; } }
 
 .job_comp, .job_position, .job_period {
   font-family: "FiraSans Medium";
   font-size: 18px;
   line-height: 18px;
   color: #727272; }
+  @media screen and (max-width: 480px) {
+    .job_comp, .job_position, .job_period {
+      font-family: "FiraSans Medium";
+      font-size: 16px;
+      line-height: 16px;
+      color: #727272; } }
 
 .job_position {
   margin: 10px 0px 7px 0px; }
+  @media screen and (max-width: 480px) {
+    .job_position {
+      margin: 10px 0px 10px 0px; } }
 
 .job_comp {
   font-family: "FiraSans Bold";
@@ -706,10 +733,16 @@ html, body {
   width: 1px;
   height: 128px;
   background: #dddddd; }
+  @media screen and (max-width: 480px) {
+    .career li:after {
+      display: none; } }
 
 .career li:last-child:after {
   width: 0px;
   height: 0px; }
+  @media screen and (max-width: 480px) {
+    .career li:last-child:after {
+      display: none; } }
 
 .job_mark {
   position: absolute;
@@ -719,6 +752,9 @@ html, body {
   width: 54px;
   left: -63px;
   top: 48px; }
+  @media screen and (max-width: 480px) {
+    .job_mark {
+      display: none; } }
 
 .job_button {
   position: absolute;
@@ -731,6 +767,9 @@ html, body {
   z-index: 20;
   left: -31px;
   top: 44px; }
+  @media screen and (max-width: 480px) {
+    .job_button {
+      display: none; } }
 
 .career li:hover {
   background-color: #32c3e5; }
