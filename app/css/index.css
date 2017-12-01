@@ -200,10 +200,12 @@ html, body {
   height: 100%; }
 
 .wrapper {
-  min-height: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto; }
 
 .container {
   display: -webkit-box;
@@ -221,19 +223,19 @@ html, body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 0px auto; }
+  margin: 0 auto; }
   @media screen and (min-width: 1201px) {
     .container {
-      max-width: 980px;
-      padding: 0px 20px; } }
+      max-width: 992px;
+      padding: 0 26px; } }
   @media screen and (max-width: 1200px) {
     .container {
-      max-width: 980px;
-      padding: 0px 20px; } }
+      max-width: 992px;
+      padding: 0 26px; } }
   @media screen and (max-width: 992px) {
     .container {
-      max-width: 980px;
-      padding: 0px 20px; } }
+      max-width: 992px;
+      padding: 0 26px; } }
   @media screen and (max-width: 768px) {
     .container {
       max-width: 768px;
@@ -274,7 +276,7 @@ html, body {
               align-items: flex-start; } }
 
 .content {
-  width: 720px;
+  width: 76.59574%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,13 +292,12 @@ html, body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-negative: 72px;
-      flex-shrink: 72px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   background-color: #f6f6f6;
-  padding: 20px 0px 0px 20px; }
+  padding: 0;
+  margin: 0; }
   @media screen and (max-width: 768px) {
     .content {
       width: 100%;
@@ -371,13 +372,13 @@ html, body {
   margin: 0px auto; }
   @media screen and (min-width: 1201px) {
     .header_container {
-      max-width: 980px; } }
+      max-width: 992px; } }
   @media screen and (max-width: 1200px) {
     .header_container {
-      max-width: 980px; } }
+      max-width: 992px; } }
   @media screen and (max-width: 992px) {
     .header_container {
-      max-width: 980px; } }
+      max-width: 992px; } }
   @media screen and (max-width: 768px) {
     .header_container {
       max-width: 768px; } }
@@ -555,10 +556,25 @@ html, body {
   z-index: 20; }
 
 .sidebar {
-  width: 220px;
-  -ms-flex-negative: 22px;
-      flex-shrink: 22px;
+  width: 23.40426%;
+  margin: 0;
+  padding: 0;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
@@ -762,13 +778,51 @@ html, body {
 .content {
   padding: 0px; }
 
+.photo_area {
+  width: 47.22222%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0; }
+
 .main_photo {
   display: block;
   background: #f6f6f6;
   height: 220px;
   width: 220px;
   border-radius: 50%;
-  margin: 28px 20px 20px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 64.70588%;
+  min-width: 166px;
+  min-height: 166px;
+  margin-top: 28px;
   shadow-box: 0px 0px 5px #ffffff;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -808,8 +862,8 @@ html, body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 380px;
-  margin: 23px 0px 0px 0px;
+  width: 52.77778%;
+  margin: 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }

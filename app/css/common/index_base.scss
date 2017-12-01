@@ -6,9 +6,23 @@
 }
 
 
+.photo_area {
+	width: 340px/720px*100%;
+	@include flexbox(column, nowrap, flex-start, center);
+	margin: 0;
+	padding: 0;
+}
+
+
+
 .main_photo {
 	@include roundBox(220px, $whiteLight);
-	margin: 28px 20px 20px 60px;
+	@include flexbox(row, nowrap, center, center);
+	width: 220px/340px*100%;
+	min-width: 166px;
+	min-height: 166px;
+
+	margin-top: 28px;
 	shadow-box: 0px 0px 5px $white;
 	order: 1;
 
@@ -25,10 +39,12 @@
 	}
 }
 
+
 .info {
 	@include flexbox(column, nowrap, flex-start, flex-start);
-	width: 380px;
-	margin: 23px 0px 0px 0px;
+	width: 380px/720px*100%
+	;
+	margin: 0;
 	order: 2;
 
 	@include tablet {

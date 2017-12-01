@@ -13,30 +13,33 @@ html, body {
 }
 
 .wrapper {
-	min-height: 100%;
 	overflow: hidden;
 	position: relative;
 	background-color: $whiteLight;
+	min-height: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .container {
+
 	@include flexbox(row, nowrap, center, flex-start);
 
 	@include ultraDesktop {
-		max-width: 940px + 2*20px; //padding left/right = 20px
-		padding: 0px 20px;
+		max-width: 940px + 2*26px; //992px padding left/right = 26px
+		padding: 0 26px;
 	}
 
 	
 	@include desktop {
-		max-width: 940px + 2*20px; //padding left/right = 20px
-		padding: 0px 20px;
+		max-width: 940px + 2*26px; //992px padding left/right = 26px
+		padding: 0 26px;
 	}
 
 
 	@include laptop {
-		max-width: 940px + 2*20px; //padding left/right = 20px
-		padding: 0px 20px;
+		max-width: 940px + 2*26px; //992px padding left/right = 26px
+		padding: 0 26px;
 	}
 
 
@@ -54,16 +57,16 @@ html, body {
 	
 	}
 
-	margin: 0px auto;
+	margin: 0 auto;
 }	
 
 .content {
-	width: $contentWidth;
+	width: 720px/(992px-2*26px)*100%;
 	@include flexbox(row, wrap, space-between, flex-start);
-	flex-shrink: $contentWidth/10;
 	order: 2;
 	background-color: $whiteLight;
-	padding: 20px 0px 0px 20px;
+	padding: 0;
+	margin: 0;
 
 	@include tablet {
 		width: 100%;

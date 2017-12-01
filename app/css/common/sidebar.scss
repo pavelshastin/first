@@ -1,10 +1,11 @@
 
 
 .sidebar {
-	width: $sidebarWidth + $sides;
-	flex-shrink: $sidebarWidth/10;
+	width: 220px/(992px-2*26px)*100%;
+	margin: 0;
+	padding: 0;
 	background-color: $whiteLight;
-	//@include flexbox(column, nowrap, flex-start, stretch);
+	@include flexbox(column, nowrap, flex-start, flex-end);
 	order: 1;
 }
 
