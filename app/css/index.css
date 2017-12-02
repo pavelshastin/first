@@ -310,6 +310,9 @@ html, body {
 
 .empty {
   height: 50px; }
+  @media screen and (max-width: 480px) {
+    .empty {
+      height: 115px; } }
 
 ::-webkit-scrollbar-button {
   background-image: url("");
@@ -368,7 +371,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 20px;
+  padding: 0px 26px;
   margin: 0px auto; }
   @media screen and (min-width: 1201px) {
     .header_container {
@@ -381,11 +384,29 @@ html, body {
       max-width: 992px; } }
   @media screen and (max-width: 768px) {
     .header_container {
-      max-width: 768px; } }
+      max-width: 768px;
+      padding: 0px 20px; } }
   @media screen and (max-width: 480px) {
     .header_container {
       max-width: 320px;
       padding: 0px 10px; } }
+
+.header_logo_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .header_logo {
   display: block;
@@ -406,7 +427,7 @@ html, body {
     .header_name {
       font-size: 14px;
       line-height: 21px;
-      width: 70px; } }
+      width: 30%; } }
 
 .header_contacts {
   margin-left: auto; }
@@ -417,6 +438,9 @@ html, body {
   top: 26px;
   left: 9999px;
   z-index: 20; }
+  @media screen and (max-width: 480px) {
+    .cont_wrapper {
+      top: 46px; } }
 
 .cont_icon {
   font-family: "FiraSan Medium";
@@ -440,9 +464,8 @@ html, body {
   @media screen and (max-width: 480px) {
     .cont_icon {
       background: url("../../icons/cont_handset.png") 0 0 no-repeat;
-      text-indent: 100%;
+      text-indent: 9999px;
       white-space: nowrap;
-      overflow: hidden;
       border: none;
       width: 33px;
       height: 33px; } }
@@ -454,9 +477,13 @@ html, body {
   display: block;
   background: transparent;
   height: 82px;
-  width: 193px;
-  top: -32px;
-  left: -30px; }
+  width: 140%;
+  left: -20%;
+  top: -32px; }
+  @media screen and (max-width: 480px) {
+    .cont_icon:after {
+      width: 200%;
+      left: -50%; } }
 
 .cont_icon:hover {
   font-family: "FiraSan Medium";
@@ -482,16 +509,13 @@ html, body {
       border: none; } }
 
 .cont_icon:hover .cont_wrapper {
-  left: -35px;
+  left: -50%;
   opacity: 1;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s; }
-  @media screen and (max-width: 768px) {
-    .cont_icon:hover .cont_wrapper {
-      left: -70px; } }
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s; }
   @media screen and (max-width: 480px) {
     .cont_icon:hover .cont_wrapper {
-      left: -170px; } }
+      left: -160px; } }
 
 .cont_pallete a {
   text-decoration: none;
@@ -508,7 +532,8 @@ html, body {
   border-radius: 10px;
   margin: 0px;
   padding: 0px;
-  list-style: none; }
+  list-style: none;
+  text-indent: 0; }
 
 .cont_pallete:last-child {
   border-bottom: none; }
@@ -546,6 +571,9 @@ html, body {
   border-right-color: transparent;
   border-top: none;
   margin: 0px auto; }
+  @media screen and (max-width: 480px) {
+    .triangle, .triangle:after {
+      display: none; } }
 
 .triangle:after {
   position: absolute;
@@ -578,6 +606,18 @@ html, body {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
+  @media screen and (max-width: 480px) {
+    .sidebar {
+      width: 100%;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 .sidebar_menu {
   display: -webkit-box;
@@ -971,14 +1011,14 @@ html, body {
   color: #ffffff; }
 
 .footer {
-  width: 100%;
   height: 50px;
   margin: 0px auto;
   margin-top: -50px;
   background-color: #414141; }
   @media screen and (max-width: 480px) {
     .footer {
-      height: 115px; } }
+      height: 115px;
+      margin-top: -115px; } }
 
 .footer_container {
   display: -webkit-box;
@@ -996,18 +1036,24 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 26px;
   height: 100%;
-  padding: 0px 0px;
-  max-width: 940px;
   margin: 0px auto; }
+  @media screen and (min-width: 1201px) {
+    .footer_container {
+      max-width: 992px; } }
+  @media screen and (max-width: 1200px) {
+    .footer_container {
+      max-width: 992px; } }
+  @media screen and (max-width: 992px) {
+    .footer_container {
+      max-width: 992px; } }
   @media screen and (max-width: 768px) {
     .footer_container {
+      max-width: 768px;
       padding: 0px 20px; } }
   @media screen and (max-width: 480px) {
     .footer_container {
-      line-height: 0px;
-      max-width: 220px;
-      margin: 0px auto;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1022,7 +1068,53 @@ html, body {
               justify-content: flex-start;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      max-width: 320px;
+      padding: 0px 10px; } }
+
+.footer_container_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 480px) {
+    .footer_container_left {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+
+.footer_container_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (max-width: 480px) {
+    .footer_container_right {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .footer_conf {
   font-family: "FiraSans Regular";
@@ -1033,8 +1125,8 @@ html, body {
     .footer_conf {
       text-align: center;
       line-height: 21px;
-      margin-top: 15px;
-      padding: 0; } }
+      padding: 15px 15% 0px 15%;
+      margin: 0; } }
 
 .footer_social {
   display: -webkit-box;
@@ -1054,11 +1146,13 @@ html, body {
           align-items: center;
   padding: 0px;
   list-style: none; }
-
-.footer_social a {
-  display: block;
-  border-radius: 50%;
-  margin-left: 8px; }
+  .footer_social li {
+    margin-left: 8px; }
+  .footer_social li:first-child {
+    margin-left: 0px; }
+  .footer_social a {
+    display: block;
+    border-radius: 50%; }
 
 /*
 Icon classes can be used entirely standalone. They are named after their original file names.

@@ -1,36 +1,70 @@
-@import "mixins.scss";
-
-
 
 .footer {
-	width: 100%;
-	height: $footerHeight;
+	height: 50px;
 	margin: 0px auto;
-	margin-top: -$footerHeight;
+	margin-top: -50px;
 	background-color: $brown;
 
 	@include mobile {
 		height: 115px;
+		margin-top: -115px;
 	}
 }
 
 .footer_container {
 	@include flexbox(row, nowrap, space-between, center);
+	padding: 0px 26px;
 	height: 100%;
-	padding: 0px $sides;
-	max-width: $maxWidth;
-	margin: 0px auto;
+
+	@include ultraDesktop {
+		max-width: 940px + 2*26px;
+		
+	}
+
+	
+	@include desktop {
+		max-width: 940px + 2*26px;
+		
+	}
+	
+	@include laptop {
+		max-width: 940px + 2*26px;
+		
+	}
+
 
 	@include tablet {
+		max-width: 728px + 2*20px;
 		padding: 0px 20px;
 	}
 
 	@include mobile {
-		line-height: 0px;
-		max-width: 220px;
-		margin: 0px auto;
 		@include flexbox(column, nowrap, flex-start, center);
- 	}
+		max-width: 300px + 2*10px;
+		padding: 0px 10px;
+		
+	}
+
+	
+	margin: 0px auto;
+
+}
+
+.footer_container_left {
+	@include flexbox(row, nowrap, flex-start, center);
+
+	@include mobile {
+		justify-content: center;
+	}
+}
+
+
+.footer_container_right {
+	@include flexbox(row, nowrap, flex-end, center);
+
+	@include mobile {
+		justify-content: center;
+	}
 }
 
 .footer_conf {
@@ -39,8 +73,8 @@
 	@include mobile {
 		text-align: center;
 		line-height: 21px;
-		margin-top: 15px;
-		padding: 0;
+		padding: 15px 15% 0px 15%;
+		margin: 0;
 	}
 }
 
@@ -49,16 +83,25 @@
 	@include flexbox(row, nowrap, flex-end, center);
 	padding: 0px;
 	list-style: none;
+
+	li {
+		margin-left: 8px;
+	}
+
+	li:first-child {
+		margin-left: 0px;
+	}
+
+	a {
+
+		display: block;
+		border-radius: 50%;
+		
+	}
+
+
+	
 }
-
-
-.footer_social a {
-
-	display: block;
-	border-radius: 50%;
-	margin-left: 8px;
-}
-
 
 
 @import "sprites.scss" //add sprites at the end of the global css-file to override background-color on background-image properties

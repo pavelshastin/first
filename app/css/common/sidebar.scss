@@ -7,6 +7,16 @@
 	background-color: $whiteLight;
 	@include flexbox(column, nowrap, flex-start, flex-end);
 	order: 1;
+
+	@include tablet {
+		width: 100%;
+		align-items: flex-start;
+	}
+
+	@include mobile {
+		width: 100%;
+		align-items: flex-start;
+	}
 }
 
 .sidebar_menu {

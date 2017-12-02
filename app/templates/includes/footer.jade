@@ -8,9 +8,11 @@
 
 footer.footer
 	.footer_container
-		.footer_conf  &copy; Конфиденциальность сайта
-		ul.footer_social
-			- each social, key in socials
-				li
-					a(href='#{social}' class="footer_social__#{key}") 
+		.footer_container_left
+			.footer_conf  &copy;&nbsp;Конфиденциальность сайта
+		.footer_container_right
+			ul.footer_social
+				- each social, key in socials
+					li
+						a(href='#{social}' class="footer_social__#{key}") 
 					

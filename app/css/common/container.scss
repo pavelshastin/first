@@ -81,7 +81,11 @@ html, body {
 }
 
 .empty {
-	height: $footerHeight;
+	height: 50px;
+
+	@include mobile {
+		height: 115px;
+	}
 }
 
 
