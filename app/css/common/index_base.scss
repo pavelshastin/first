@@ -3,6 +3,10 @@
 
 .content {
 	padding: 0px;
+
+	@include tablet {
+		justify-content: flex-start;
+	}
 }
 
 
@@ -10,7 +14,17 @@
 	width: 340px/720px*100%;
 	@include flexbox(column, nowrap, flex-start, center);
 	margin: 0;
-	padding: 0;
+	padding-top: 28px;
+
+	@include tablet {
+		width: 268px/(728px + 2*20px)*100%;
+		padding-top: 42px;
+		min-width: 166px + 2*26px;
+	}
+
+	@include mobile {
+		padding-top: 24px;
+	}
 }
 
 
@@ -19,43 +33,39 @@
 	@include roundBox(220px, $whiteLight);
 	@include flexbox(row, nowrap, center, center);
 	width: 220px/340px*100%;
-	min-width: 166px;
-	min-height: 166px;
-
-	margin-top: 28px;
 	shadow-box: 0px 0px 5px $white;
 	order: 1;
 
 	@include tablet {
 		@include roundBox(166px + 2*5px, $whiteLight);
 		border: 5px solid $white;
-		margin: 42px 0px 0px 26px;
 	}
 
 	@include mobile {
 		@include roundBox(140px + 2*5px, $whiteLight);
 		border: 5px solid $white;
-		margin: 23px auto 0px auto;
 	}
 }
 
 
-.info {
-	@include flexbox(column, nowrap, flex-start, flex-start);
-	width: 380px/720px*100%
-	;
+
+
+.info_area {
+	@include flexbox(column, nowrap, flex-start, center);
+	width: 380px/720px*100%;
+	padding-top: 28px;
 	margin: 0;
 	order: 2;
 
 	@include tablet {
-		width: 462px;
-		margin: 42px 38px 0px 0px;
+		width: 417px/(728px + 2*20px)*100%;
+		padding-top: 42px;
 	}
 
 	@include mobile {
 		width: 100%;
 		margin: 0px;
-		padding: 0px;
+		padding-top: 8px;
 
 	}
 
@@ -66,32 +76,31 @@
 .info_header {
 	@include font("FiraSans Medium", 35px, $brown);
 	margin: 0px;
-	padding: 0px;
+	padding-bottom: 15px;
+	align-self: flex-start;
 	order: 1;
 
-	@include tablet {
-		padding: 0px 20px;
-	}
-
 	@include mobile {
-		margin: 5px auto 0px auto;
-		padding: 0px;
-
+		align-self: center
 	}
+
+
 }
 
 .info_text {
 	@include font("FiraSans Light", 18px, $brown);
+	height: 290px;
+	overflow-y: scroll;
 	line-height: 26px;
 	overflow-y: scroll;
+	margin: 0;
 	order: 2;
 
 	@include tablet {
 		@include font("FiraSans Light", 18px, $brown);
 		line-height: 26px;
-		height: 371px;
+		height: 365px;
 		width: 100%;
-		padding: 0px 20px;
 		overflow-y: scroll;
 	}
 
@@ -107,23 +116,29 @@
 }
 
 
+.button_area {
+	width: 100%;
+	@include flexbox(column, nowrap, flex-start, flex-end);
+
+	order: 3;
+}
+
+
 .resume_button {
-	position: relative;
+	position: relative; //for icon before the button name
 	display: inline-block;
-	align-self: flex-end;
-	height: $buttonResumeHeight;
-	width: 173px;
 	border: 2px solid $redLight;
 	@include font("OpenSans Bold", 14px, $redLight);
+	height: 40px;
 	text-decoration: none;
-	border-radius: $buttonResumeHeight/2;
-	padding: 10px 0px 16px 36px;
-	margin: 43px 0px 20px 20px;
+	border-radius: 20px; //40px/2
+	padding: 10px 14px 16px 36px;
 	background-color: $whiteLight;
+	margin-top: 52px;
 	order: 3;
 
 	@include tablet {
-		margin: 34px 25px 0px 0px;
+		margin-top: 60px;
 	}	
 
 	@include mobile {

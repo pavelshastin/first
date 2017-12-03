@@ -20,91 +20,94 @@ body {
 	z-index: 100;
 	background: #f6f6f6;
 	opacity: 1;
-	transition: opacity 2s;
+	transition: opacity 1s;
+	@include flexbox(column, nowrap, flex-start, center);
+	padding-top: 220px - $imageDiameter/2;
+
+	@include tablet {
+		padding-top: 368px - $imageDiamTab/2;
+	}
+
+	@include mobile {
+		padding-top: 184px - $imageDiamTab/2;
+	} 
 }
 
 
 .hello_plate {
+	position: relative;
 	width: 300px;
-	height: 232px;
+	//height: 232px;
 	background: #ffffff;
-	margin: 220px auto;
 	border-radius: 8px;
 	//shadow-box: 0px 0px 1px #e4e4e4;
 	padding: 0px;
+	margin-top: $imageDiameter/2;
+	padding-top: $imageDiameter/2;
 
 	@include tablet {
 		width: 354px;
-		height: 214px;
-		margin-top: 368px;
+		padding-top: $imageDiamTab/2;
+		//height: 214px;
+		
 	}
 
 	@include mobile {
 		width: 300px;
-		height: 214px;
-		margin-top: 184px;
+		padding-top: $imageDiamTab/2;
+		//height: 214px;
+		
 	}
 }
 
 
 .img_hello {
-	position: relative;
+	position: absolute;
 	@include roundBox($imageDiameter, #ffffff);
 	box-shadow: 0px 0px 4px 0px #727272;
-	margin: 0px auto;
-	top: $shift;
-
+	left: 300px/2 - $imageDiameter/2;
+	top: -$imageDiameter/2;
+	
+	
 	@include tablet {
 		@include roundBox($imageDiamTab, #ffffff);
 		box-shadow: 0px 0px 2px 0px #727272;
-		top: $shift_tab;
+		left: 354px/2 - $imageDiamTab/2;
+		top: -$imageDiamTab/2;
+	}
+
+	@include mobile {
+		left: 300px/2 - $imageDiamTab/2;
+		top: -$imageDiamTab/2;
 	}
 }
 
 
-.hello_name, .hello_surname {
-	@include font("OpenSans Bold", 21px, #727272);
-}
 
 .hello_name {
-	position: relative;
-	top: $shift;
+	@include font("OpenSans Bold", 21px, #727272);
+	line-height: 1.3;
 	text-align: center;
-	margin-top: 19px;
-	margin-bottom: 5px;
+	padding: 19px 30% 10px 30%;
 
 	@include tablet {
-		top: $shift_tab;
+		
 	}
 }
 
-.hello_surname {
-	position: relative;
-	top: $shift;
-	text-align: center;
-	margin-bottom: 20px;
-	margin-top: 0px;
 
-	@include tablet {
-		top: $shift_tab;
-	}
-}
 
 
 .hello_button_field {
-	position: relative;
-	top: $shift;
+	
 	background-color: #33c1e3;
 	width: 100%;
 	height: 78px;
-	margin-top: auto;
 	border-bottom-right-radius: 8px;
 	border-bottom-left-radius: 8px;
 	@include flexbox(column, nowrap, center, center);
 
-	@include tablet {
-		top: $shift_tab;
-	}
+	
 }
 
 
@@ -113,10 +116,10 @@ body {
 	@include font("FiraSans Bold", 14px, #ffffff);
 	line-height: 36px;
 	font-style: bold;
-	width: 138px;
+	padding: 0px 14px;
 	text-align: center;
 	border: 2px solid #ffffff;
-	border-radius: 19px;
+	border-radius: 19px; //36px/2 + 2px/2
 	background: #33c1e3;
 	cursor: pointer;
 }

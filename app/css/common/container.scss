@@ -45,7 +45,7 @@ html, body {
 
 	@include tablet {
 		max-width: 728px + 2*20px; //padding left/right = 20px
-		padding: 0px 20px;
+		padding: 0;
 		@include flexbox(column, nowrap, flex-start, flex-start);
 	}
 	
@@ -62,7 +62,7 @@ html, body {
 
 .content {
 	width: 720px/(992px-2*26px)*100%;
-	@include flexbox(row, wrap, space-between, flex-start);
+	@include flexbox(row, nowrap, space-between, flex-start);
 	order: 2;
 	background-color: $whiteLight;
 	padding: 0;
@@ -74,6 +74,7 @@ html, body {
 	}
 
 	@include mobile {
+		@include flexbox(column, nowrap, flex-start, center);
 		width: 100%;
 		padding: 0px;
 		margin: 0px;
@@ -95,6 +96,7 @@ background-image:url('');
 background-repeat:no-repeat;
 width:0px;
 height:0px;
+margin: 0; // to make scrollthumb not overflow the scrolling container (content area)
 }
 
 ::-webkit-scrollbar-track {

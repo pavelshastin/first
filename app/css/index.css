@@ -40,29 +40,50 @@ body {
   z-index: 100;
   background: #f6f6f6;
   opacity: 1;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s; }
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 150px; }
+  @media screen and (max-width: 768px) {
+    .hello {
+      padding-top: 316px; } }
+  @media screen and (max-width: 480px) {
+    .hello {
+      padding-top: 132px; } }
 
 .hello_plate {
+  position: relative;
   width: 300px;
-  height: 232px;
   background: #ffffff;
-  margin: 220px auto;
   border-radius: 8px;
-  padding: 0px; }
+  padding: 0px;
+  margin-top: 70px;
+  padding-top: 70px; }
   @media screen and (max-width: 768px) {
     .hello_plate {
       width: 354px;
-      height: 214px;
-      margin-top: 368px; } }
+      padding-top: 52px; } }
   @media screen and (max-width: 480px) {
     .hello_plate {
       width: 300px;
-      height: 214px;
-      margin-top: 184px; } }
+      padding-top: 52px; } }
 
 .img_hello {
-  position: relative;
+  position: absolute;
   display: block;
   background: #ffffff;
   height: 140px;
@@ -70,7 +91,7 @@ body {
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 4px 0px #727272;
           box-shadow: 0px 0px 4px 0px #727272;
-  margin: 0px auto;
+  left: 80px;
   top: -70px; }
   @media screen and (max-width: 768px) {
     .img_hello {
@@ -81,41 +102,26 @@ body {
       border-radius: 50%;
       -webkit-box-shadow: 0px 0px 2px 0px #727272;
               box-shadow: 0px 0px 2px 0px #727272;
+      left: 125px;
+      top: -52px; } }
+  @media screen and (max-width: 480px) {
+    .img_hello {
+      left: 98px;
       top: -52px; } }
 
-.hello_name, .hello_surname {
+.hello_name {
   font-family: "OpenSans Bold";
   font-size: 21px;
   line-height: 21px;
-  color: #727272; }
-
-.hello_name {
-  position: relative;
-  top: -70px;
+  color: #727272;
+  line-height: 1.3;
   text-align: center;
-  margin-top: 19px;
-  margin-bottom: 5px; }
-  @media screen and (max-width: 768px) {
-    .hello_name {
-      top: -52px; } }
-
-.hello_surname {
-  position: relative;
-  top: -70px;
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 0px; }
-  @media screen and (max-width: 768px) {
-    .hello_surname {
-      top: -52px; } }
+  padding: 19px 30% 10px 30%; }
 
 .hello_button_field {
-  position: relative;
-  top: -70px;
   background-color: #33c1e3;
   width: 100%;
   height: 78px;
-  margin-top: auto;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   display: -webkit-box;
@@ -133,9 +139,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media screen and (max-width: 768px) {
-    .hello_button_field {
-      top: -52px; } }
 
 .hello_button_goto {
   display: block;
@@ -145,7 +148,7 @@ body {
   color: #ffffff;
   line-height: 36px;
   font-style: bold;
-  width: 138px;
+  padding: 0px 14px;
   text-align: center;
   border: 2px solid #ffffff;
   border-radius: 19px;
@@ -239,7 +242,7 @@ html, body {
   @media screen and (max-width: 768px) {
     .container {
       max-width: 768px;
-      padding: 0px 20px;
+      padding: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -284,8 +287,8 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -304,6 +307,21 @@ html, body {
       padding: 0px; } }
   @media screen and (max-width: 480px) {
     .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       width: 100%;
       padding: 0px;
       margin: 0px; } }
@@ -318,7 +336,8 @@ html, body {
   background-image: url("");
   background-repeat: no-repeat;
   width: 0px;
-  height: 0px; }
+  height: 0px;
+  margin: 0; }
 
 ::-webkit-scrollbar-track {
   background-color: #f6f6f6; }
@@ -586,7 +605,7 @@ html, body {
 .sidebar {
   width: 23.40426%;
   margin: 0;
-  padding: 0;
+  padding-top: 22px;
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,11 +628,13 @@ html, body {
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%;
+      padding: 0 26px;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
   @media screen and (max-width: 480px) {
     .sidebar {
+      padding: 0;
       width: 100%;
       -webkit-box-align: start;
           -ms-flex-align: start;
@@ -817,6 +838,11 @@ html, body {
 
 .content {
   padding: 0px; }
+  @media screen and (max-width: 768px) {
+    .content {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
 
 .photo_area {
   width: 47.22222%;
@@ -836,7 +862,15 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  padding: 0; }
+  padding-top: 28px; }
+  @media screen and (max-width: 768px) {
+    .photo_area {
+      width: 34.89583%;
+      padding-top: 42px;
+      min-width: 218px; } }
+  @media screen and (max-width: 480px) {
+    .photo_area {
+      padding-top: 24px; } }
 
 .main_photo {
   display: block;
@@ -860,9 +894,6 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   width: 64.70588%;
-  min-width: 166px;
-  min-height: 166px;
-  margin-top: 28px;
   shadow-box: 0px 0px 5px #ffffff;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -874,8 +905,7 @@ html, body {
       height: 176px;
       width: 176px;
       border-radius: 50%;
-      border: 5px solid #ffffff;
-      margin: 42px 0px 0px 26px; } }
+      border: 5px solid #ffffff; } }
   @media screen and (max-width: 480px) {
     .main_photo {
       display: block;
@@ -883,10 +913,9 @@ html, body {
       height: 150px;
       width: 150px;
       border-radius: 50%;
-      border: 5px solid #ffffff;
-      margin: 23px auto 0px auto; } }
+      border: 5px solid #ffffff; } }
 
-.info {
+.info_area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -899,23 +928,24 @@ html, body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 52.77778%;
+  padding-top: 28px;
   margin: 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
   @media screen and (max-width: 768px) {
-    .info {
-      width: 462px;
-      margin: 42px 38px 0px 0px; } }
+    .info_area {
+      width: 54.29688%;
+      padding-top: 42px; } }
   @media screen and (max-width: 480px) {
-    .info {
+    .info_area {
       width: 100%;
       margin: 0px;
-      padding: 0px; } }
+      padding-top: 8px; } }
 
 .info_header {
   font-family: "FiraSans Medium";
@@ -923,25 +953,27 @@ html, body {
   line-height: 35px;
   color: #414141;
   margin: 0px;
-  padding: 0px;
+  padding-bottom: 15px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
-  @media screen and (max-width: 768px) {
-    .info_header {
-      padding: 0px 20px; } }
   @media screen and (max-width: 480px) {
     .info_header {
-      margin: 5px auto 0px auto;
-      padding: 0px; } }
+      -ms-flex-item-align: center;
+          align-self: center; } }
 
 .info_text {
   font-family: "FiraSans Light";
   font-size: 18px;
   line-height: 18px;
   color: #414141;
+  height: 290px;
+  overflow-y: scroll;
   line-height: 26px;
   overflow-y: scroll;
+  margin: 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2; }
@@ -952,9 +984,8 @@ html, body {
       line-height: 18px;
       color: #414141;
       line-height: 26px;
-      height: 371px;
+      height: 365px;
       width: 100%;
-      padding: 0px 20px;
       overflow-y: scroll; } }
   @media screen and (max-width: 480px) {
     .info_text {
@@ -969,29 +1000,47 @@ html, body {
       overflow: hidden;
       margin-bottom: 0px; } }
 
+.button_area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3; }
+
 .resume_button {
   position: relative;
   display: inline-block;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  height: 40px;
-  width: 173px;
   border: 2px solid #e96668;
   font-family: "OpenSans Bold";
   font-size: 14px;
   line-height: 14px;
   color: #e96668;
+  height: 40px;
   text-decoration: none;
   border-radius: 20px;
-  padding: 10px 0px 16px 36px;
-  margin: 43px 0px 20px 20px;
+  padding: 10px 14px 16px 36px;
   background-color: #f6f6f6;
+  margin-top: 52px;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3; }
   @media screen and (max-width: 768px) {
     .resume_button {
-      margin: 34px 25px 0px 0px; } }
+      margin-top: 60px; } }
   @media screen and (max-width: 480px) {
     .resume_button {
       margin: 40px auto 30px auto; } }

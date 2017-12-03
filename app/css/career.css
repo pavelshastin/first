@@ -106,7 +106,7 @@ html, body {
   @media screen and (max-width: 768px) {
     .container {
       max-width: 768px;
-      padding: 0px 20px;
+      padding: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -151,8 +151,8 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -171,6 +171,21 @@ html, body {
       padding: 0px; } }
   @media screen and (max-width: 480px) {
     .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       width: 100%;
       padding: 0px;
       margin: 0px; } }
@@ -185,7 +200,8 @@ html, body {
   background-image: url("");
   background-repeat: no-repeat;
   width: 0px;
-  height: 0px; }
+  height: 0px;
+  margin: 0; }
 
 ::-webkit-scrollbar-track {
   background-color: #f6f6f6; }
@@ -453,7 +469,7 @@ html, body {
 .sidebar {
   width: 23.40426%;
   margin: 0;
-  padding: 0;
+  padding-top: 22px;
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -476,11 +492,13 @@ html, body {
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%;
+      padding: 0 26px;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
   @media screen and (max-width: 480px) {
     .sidebar {
+      padding: 0;
       width: 100%;
       -webkit-box-align: start;
           -ms-flex-align: start;
