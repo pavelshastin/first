@@ -37,10 +37,8 @@ body {
 .hello_plate {
 	position: relative;
 	width: 300px;
-	//height: 232px;
 	background: #ffffff;
 	border-radius: 8px;
-	//shadow-box: 0px 0px 1px #e4e4e4;
 	padding: 0px;
 	margin-top: $imageDiameter/2;
 	padding-top: $imageDiameter/2;
@@ -48,15 +46,14 @@ body {
 	@include tablet {
 		width: 354px;
 		padding-top: $imageDiamTab/2;
-		//height: 214px;
+		margin-top: $imageDiamTab/2;
 		
 	}
 
 	@include mobile {
 		width: 300px;
 		padding-top: $imageDiamTab/2;
-		//height: 214px;
-		
+		margin-top: $imageDiamTab/2;
 	}
 }
 
@@ -91,8 +88,9 @@ body {
 	padding: 19px 30% 10px 30%;
 
 	@include tablet {
-		
+		padding-bottom: 14px;
 	}
+
 }
 
 
@@ -107,6 +105,9 @@ body {
 	border-bottom-left-radius: 8px;
 	@include flexbox(column, nowrap, center, center);
 
+	@include tablet {
+		
+	}
 	
 }
 

@@ -76,11 +76,13 @@ body {
   @media screen and (max-width: 768px) {
     .hello_plate {
       width: 354px;
-      padding-top: 52px; } }
+      padding-top: 52px;
+      margin-top: 52px; } }
   @media screen and (max-width: 480px) {
     .hello_plate {
       width: 300px;
-      padding-top: 52px; } }
+      padding-top: 52px;
+      margin-top: 52px; } }
 
 .img_hello {
   position: absolute;
@@ -117,6 +119,9 @@ body {
   line-height: 1.3;
   text-align: center;
   padding: 19px 30% 10px 30%; }
+  @media screen and (max-width: 768px) {
+    .hello_name {
+      padding-bottom: 14px; } }
 
 .hello_button_field {
   background-color: #33c1e3;
