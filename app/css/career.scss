@@ -6,27 +6,85 @@
 @import "./common/sidebar.scss";
 
 
+.content_container {
+	@include flexbox(column, nowrap, flex-start, center);
+	padding-top: 22px;
+	width: 720px/(992px-2*26px)*100%;
+	order: 2;
 
-.main_header {
-	width: 100%;
-	@include font("FiraSans Medium", 35px, $brown);
-	line-height: 45px;
-	margin: 0px;
-	padding: 0px 0px 20px 0px;
-	
 	@include tablet {
-		margin: 45px 0px 25px 0px;
-		padding: 0px;
+		padding: 40px 20px 0 20px;
+		width: 100%;
 	}
 
 	@include mobile {
-		width: auto;
-		margin: 15px auto 13px auto;
+		padding: 0;
+		padding-top: 20px;
+		width: 100%;
+	}
+}
+
+
+
+.headers {
+	width: 100%;
+	@include flexbox(column, nowrap, flex-start, center);
+	padding-left: 20px;
+	padding-bottom: 28px;
+	order: 1;
+
+	@include tablet {
+		padding-left: 0px;
+		padding-bottom: 15px;
+	}
+}
+
+.main_header {
+	@include font("FiraSans Medium", 35px, $brown);
+	text-align: left;
+	width: 100%;
+	margin: 0;
+	order: 1;
+	
+	@include mobile {
+		text-align: center;
 		padding: 0px;
 	}
 
 }
 
+.contents {
+	width: 100%;
+	@include flexbox(row, nowrap, flex-start, flex-start);
+	order: 2;
+
+	@include tablet {
+		justify-content: space-between;
+	}
+
+	@include mobile {
+		@include flexbox(column, nowrap, flex-start, center);
+	}
+}
+
+
+.photo_area {
+	width: 260px/720px*100%;
+	padding: 0 10px;
+	@include flexbox(column, nowrap, flex-start, center);
+
+	@include tablet {
+		width: 260px/768px*100%;
+		align-items: flex-start;
+		padding: 0;
+	}
+
+	@include mobile {
+		width: 100%;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+}
 
 .main_img {
 	width: 220px;
@@ -37,47 +95,59 @@
 	border-radius: 7px;
 
 	@include tablet {
-		width: 228px;
+		width: 228px/260px*100%;
 		height: 228px;
 	}
 
 	@include mobile {
 		width: 220px;
 		height: 220px;
-		margin: 0px auto;
 	}
 
+}
+
+
+.text_area {
+	width: 460px/720px*100%;
+	padding: 0;
+	@include flexbox(column, nowrap, flex-start, flex-srart);
+
+	@include tablet {
+		width: 460px/768px*100%;
+	}
+
+	@include mobile {
+		width: 100%;
+		padding-bottom: 20px;
+	}
 }
 
 
 .career {
 	order: 2;
-	width: 380px;
+	width: 100%;
 	padding: 0px;
 	list-style: none;
 	margin: 0px;
 
-	@include tablet {
-		width: 356px;
-	}
-
+	
 	@include mobile {
 		width: 100%;
-		margin: 20px auto;	
 	}
 }
 
 .career li {
 	position: relative;
-	width: 100%;
-	height: 108px;
+	width: 380px/460px*100%;
 	background-color: $white;
 	border-radius: 8px;
 	box-shadow: 0px 0px 1px #f0f0f0;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 20px 80px;
 	padding: 18px 20px 18px 20px;
 
 	@include mobile {
+		margin-left: 0;
+		width: 100%;
 		padding: 12px 20px 18px 20px;	
 	}
 

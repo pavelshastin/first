@@ -42,18 +42,23 @@ body
 		include ./includes/header.jade
 
 		.container
-			main.content
-				h1.main_header Карьерный путь
-				img(src='images/night_city.jpg', alt='night city').main_img
+			main.content_container
+				.headers
+					h1.main_header Карьерный путь
+				
+				.contents
+					.photo_area
+						img(src='images/night_city.jpg', alt='night city').main_img
 
-				ul.career
-					-each job in jobs
-						li(class='career_#{job.mark}') 
-							.job_comp <b><q>#{job.comp}</q></b> 
-							.job_position #{job.position}
-								.job_mark #{job.mark}
-								.job_button
-							.job_period #{job.period}
+					.text_area
+						ul.career
+							-each job in jobs
+								li(class='career_#{job.mark}') 
+									.job_comp <b><q>#{job.comp}</q></b> 
+									.job_position #{job.position}
+										.job_mark #{job.mark}
+										.job_button
+									.job_period #{job.period}
 
 
 			include ./includes/sidebar.jade

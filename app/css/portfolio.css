@@ -84,9 +84,9 @@ html, body {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -141,54 +141,6 @@ html, body {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
-
-.content {
-  width: 76.59574%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  background-color: #f6f6f6;
-  padding: 0;
-  margin: 0; }
-  @media screen and (max-width: 768px) {
-    .content {
-      width: 100%;
-      padding: 0px; } }
-  @media screen and (max-width: 480px) {
-    .content {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      width: 100%;
-      padding: 0px;
-      margin: 0px; } }
 
 .empty {
   height: 50px; }
@@ -492,7 +444,7 @@ html, body {
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%;
-      padding: 0 26px;
+      padding: 0 20px;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
