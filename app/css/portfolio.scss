@@ -5,16 +5,46 @@
 @import "./common/sidebar.scss";
 
 
-// .content {
-// 	order: 2;
-// 	width: 850px;
-// 	flex-shrink: 85;
-// 	padding: 20px 110px 0px 20px; /*//margin-right: 130px - margin-right-portfolio-li*/
-// 	background-color: #f6f6f6;
-// 	display: flex;
-// 	flex-flow: row wrap;
-// 	justify-content: space-between;
-// }
+
+.container {
+	padding-right: 0;
+
+	@include mobile {
+		padding-right: 10px;
+	}
+}
+
+.sidebar {
+	width: 220px/(992px-1*26px)*100%;
+}
+
+
+.content_container {
+	@include flexbox(column, nowrap, flex-start, center);
+	padding-top: 18px;
+	padding-left: 20px;
+	width: (720px+26px)/(992px-1*26px)*100%;
+	order: 2;
+
+	@include tablet {
+		width: 100%;
+	}
+
+	@include mobile {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+
+.headers {
+	@include flexbox(column, nowrap, flex-start, center);
+	width: 100%;
+
+}
+
+
+
 
 
 .main_header {
@@ -23,25 +53,27 @@
 	padding: 5px 0px;
 	margin: 0px;
 
-	@include tablet {
-		padding: 0px;
-		margin-top: 23px;
-		margin-bottom: 5px;
-	}
-
+	
 	@include mobile {
-		width: auto;
-		padding: 0px;
-		margin: 33px auto 30px auto;
+		padding-top: 35px;
+		padding-bottom: 30px;
+		text-align: center;		
 	}
 }
 
+
+
+.contents {
+	@include flexbox(row, nowrap, flex-start, flex-start);
+}
+
+
 .portfolio {
-	list-style: none;
+	@include flexbox(row, wrap, flex-start, flex-start);
 	width: 100%;
-	@include flexbox(row, wrap, space-between, flex-start);
 	margin: 0px;
 	padding: 0px;
+	list-style: none;
 
 	@include tablet {
 		justify-content: flex-start;
@@ -54,97 +86,81 @@
 
 .portfolio li {
 	width: 220px;
-	height: 280px;
 	box-shadow: 0px 0px 3px #e6e6e6e;
 	background: $white;
 	border-radius: 8px;
 	margin-top: 20px;
+	margin-right: 20px;
 	padding: 0px;
 	overflow: hidden;
-	@include flexbox(column, nowrap, space-between, flex-start); 
+	@include flexbox(column, nowrap, flex-start, flex-start); 
 
 	@include tablet {
 		width: 228px;
-		height: 292px;
-		margin-left: 20px;
-		
-		&:nth-child(3n+1) {
-			margin-left: 0px;
-		}
 	}
 
 	@include mobile {
 		width: 300px;
-		height: 345px;
-		margin: 0px auto 20px auto;
 		border-radius: 10px;
+		margin: 0;
+		margin-bottom: 20px;
 	}
 
 
 
 }
-
-//
-.portfolio li:last-child {
-	margin-right: auto;
-	margin-left: 20px;
-
-	@include mobile {
-		margin: 0px auto;
-	}
-}
-
 
 .portfolio h4 {
-	margin: 15px 20px 5px 20px;
-	padding: 0px;
+	padding: 17px 20px 0px 20px;
+	margin: 0;
 	@include font("FiraSans Regular", 21px, $blueLightPortfolio);
 	order: 2;
 
 	@include tablet {
-		margin: 15px 20px 0px 20px;
+		padding: 15px 20px 0px 20px;
 	}
 
 	@include mobile {
 		@include font("FiraSans Regular", 24px, $blueLightPortfolio);
-		padding: 0px;
-		margin: 15px 20px 5px 20px;
+		padding: 15px 20px 0px 20px;
 	}
 
 }
 
 
 .portfolio p {
-	margin: 0px 20px 20px 20px;
-	padding: 0px;
+	padding: 5px 20px 0px 20px;
+	margin: 0;
 	@include font("FiraSans Light", 14px, $brown);
 	order: 3;
 
-	@include tablet {
-		margin: 0px 20px 15px 20px;
-	}
-
+	
 	@include mobile {
 		@include font("FiraSans Light", 16px, $brown);
-		margin: 0px 20px 20px 20px;
+		padding: 5px 20px 0px 20px;
 	}
 }
 
 
-.portfolio img {
+.portfolio_image {
 	width: 100%;
+	margin: 0;
 	height: 172px;
+	background: transparent no-repeat 50% 50%;
+	background-size: 100%;
 	order: 1;
-
+	
 	@include tablet {
 		height: 178px;
 	}
 
 	@include mobile {
-		height: 234px;
+		height: 235px;
 	}
 
 }
+
+
 
 .portfolio .icon_desktop,  .portfolio .icon_mobile{
 	position: relative;
@@ -152,65 +168,41 @@
 	font-size: 14px;
 	font-weight: bold;
 	width: 100%;
-	height: 19px;
-	margin: 0px 20px 14px 20px;
+	padding: 20px 20px 14px 45px;
 	order: 4;
 
 	@include tablet {
-		margin: 0px 20px 19px 20px;
+		padding: 22px 20px 19px 45px;
 	}
 
 	@include mobile {
 		font-size: 16px;
-		margin: 0px 20px 30px 25px;
+		padding: 15px 20px 18px 45px;
 	}
 
 }
 
-
-.portfolio .icon_desktop {
-	padding-left: 25px;
-
-}
 
 .portfolio .icon_mobile {
-	padding-left: 14px;
+	padding-left: 34px;
 
 }
 
-.portfolio .icon_desktop:before {
+.portfolio .icon_desktop:before,  .portfolio .icon_mobile:before {
 	position: absolute;
 	content: "";
-	bottom: 3px;
-	left: -2px;
+	bottom: 14px; //icon_desktop padding-bottom to match the bottom of the block's content
+	left: 20px; //portfolio h4, p padding-left to match the left edge of the block's content  
 
 	@include tablet {
-		bottom: 3px;
-		left: 0px;
+		bottom: 19px; 
+		left: 20px;
 	}
 
 
 	@include mobile {
-		bottom: 3px;
-		left: -3px;
-	}
-}
-
-
-.portfolio .icon_mobile:before {
-	position: absolute;
-	content: "";
-	bottom: 3px;
-	left: -2px;
-
-	@include tablet {
-		bottom: 6px;
-		left: 0px;
-	}
-
-	@include mobile {
-		bottom: 3px;
-		left: -3px;
+		bottom: 18px;
+		left: 20px;
 	}
 }
 

@@ -49,22 +49,22 @@ body
 		include ./includes/header.jade
 
 		.container
-			main.content
-				h1.main_header Портфолио
-				ul.portfolio
-					-each project, key in projects
-						li(class='portfolio_#{key}')
-							img(src=project.img, alt=project.head)
-							h4 #{project.head}
-							p #{project.desc}
-							if project.type == 'land' 
-								div.icon_desktop Лендинг
-							else if (project.type == 'site')
-								div.icon_desktop Корпоративный сайт	
-							else if (project.type == 'app')
-								div.icon_mobile Приложение	
-
-
+			main.content_container
+				.headers
+					h1.main_header Портфолио
+				.contents
+					ul.portfolio
+						-each project, key in projects
+							li(class='portfolio_#{key}')
+								div(style="background-image: url('#{project.img}')").portfolio_image
+								h4 #{project.head}
+								p #{project.desc}
+								if project.type == 'land' 
+									div.icon_desktop Лендинг
+								else if (project.type == 'site')
+									div.icon_desktop Корпоративный сайт	
+								else if (project.type == 'app')
+									div.icon_mobile Приложение
 			include ./includes/sidebar.jade
 	.empty
 
